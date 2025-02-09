@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Archivos ignorados
+node_modules/
+dist/
+.vscode/
+.DS_Store
+*.log
+
