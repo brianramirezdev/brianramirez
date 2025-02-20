@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-killua-500: #0024ff;
+}
