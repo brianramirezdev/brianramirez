@@ -9,11 +9,11 @@
 @font-face {
 	font-family: Satoshi;
 	font-display: swap;
-	src: url('src/assets/fonts/Satoshi-Regular.woff2') format('woff2');
+	src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
 }
 
 @font-face {
 	font-family: lemurmure;
 	font-display: swap;
-	src: url('src/assets/fonts/LeMurmure-Regular.woff2') format('woff2');
+	src: url('/fonts/LeMurmure-Regular.woff2') format('woff2');
 }
