@@ -155,4 +155,16 @@
     button {
         @apply cursor-pointer hover:bg-accent hover:text-accent-foreground active:scale-95 transition-transform;
     }
+
+    /* Chrome, Edge, Safari */
+    html.lenis,
+    html.lenis body {
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+    }
+
+    html.lenis::-webkit-scrollbar,
+    html.lenis body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari and Opera */
+    }
 }

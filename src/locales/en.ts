@@ -60,6 +60,4 @@ export const en = {
     language: {
         toggle: 'Toggle language',
     },
-} as const;
-
-export type Translations = typeof en;
+};

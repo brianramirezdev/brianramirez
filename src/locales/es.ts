@@ -61,6 +61,4 @@ export const es = {
     language: {
         toggle: 'Cambiar idioma',
     },
-} as const;
-
-export type Translations = typeof es;
+};

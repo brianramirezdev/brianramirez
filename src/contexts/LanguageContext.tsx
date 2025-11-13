@@ -1,7 +1,7 @@
 // src/contexts/LanguageContext.tsx
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import { translations, type Language } from '@/locales';
-import type { Translations } from '@/locales/es';
+import { type Translations } from '@/locales';
 
 interface LanguageContextType {
     language: Language;
@@ -44,7 +44,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     const value: LanguageContextType = {
         language,
         setLanguage,
-        t: translations[language],
+        t: translations[language] as Translations,
     };
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
