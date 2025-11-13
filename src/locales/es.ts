@@ -2,7 +2,7 @@
 export const es = {
     navbar: {
         about: 'Sobre mí',
-        work: 'Trabajo',
+        works: 'Trabajos',
         contact: 'Contacto',
     },
     hero: {

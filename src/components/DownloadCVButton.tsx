@@ -2,8 +2,10 @@
 
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export function DownloadCVButton() {
+    const { t } = useLanguage();
     return (
         <Button
             asChild
@@ -13,7 +15,7 @@ export function DownloadCVButton() {
         >
             <a href="/brian_ramirez_cv.pdf" download="brian_ramirez_cv.pdf" className="flex items-center gap-2">
                 <Download size={20} />
-                Descargar CV
+                {t.downloadCV.label}
             </a>
         </Button>
     );
