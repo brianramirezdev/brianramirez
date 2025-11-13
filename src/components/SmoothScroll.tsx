@@ -1,40 +1,45 @@
-'use client';
-import { useEffect, type ReactNode } from 'react';
-import Lenis from 'lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { useRef, useEffect, type ReactNode } from 'react';
+// import { ReactLenis } from 'lenis/react';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-export default function SmoothScroll({ children }: { children: ReactNode }) {
-    useEffect(() => {
-        const lenis = new Lenis({
-            duration: 1.1,
-            easing: (t) => 1 - Math.pow(2, -10 * t), // easing más fluido
-            smoothWheel: true,
-        });
+// export default function SmoothScroll({ children }: { children: ReactNode }) {
+//     const lenisRef = useRef<any>(null);
 
-        // Guardamos la instancia global
-        (window as any).lenis = lenis;
+//     useEffect(() => {
+//         // Actualiza ScrollTrigger en cada frame de Lenis
+//         function onScroll() {
+//             ScrollTrigger.update();
+//         }
 
-        // 🔹 Vinculamos el ticker de GSAP al de Lenis
-        const updateLenis = (time: number) => {
-            lenis.raf(time * 1000);
-        };
+//         // Atacha evento Lenis para actualizar ScrollTrigger
+//         const lenis = lenisRef.current?.lenis;
+//         if (lenis) {
+//             lenis.on('scroll', onScroll);
+//         }
 
-        gsap.ticker.add(updateLenis);
+//         ScrollTrigger.refresh();
 
-        // 🔹 Cada vez que Lenis hace scroll, actualiza ScrollTrigger
-        lenis.on('scroll', ScrollTrigger.update);
+//         return () => {
+//             if (lenis) {
+//                 lenis.off('scroll', onScroll);
+//             }
+//         };
+//     }, []);
 
-        // 🔹 Refresca al cargar
-        ScrollTrigger.refresh();
-
-        return () => {
-            gsap.ticker.remove(updateLenis);
-            lenis.destroy();
-        };
-    }, []);
-
-    return <>{children}</>;
-}
+//     return (
+//         <ReactLenis
+//             root
+//             options={{
+//                 lerp: 0.1,
+//                 duration: 1.2,
+//                 smoothWheel: true,
+//             }}
+//             ref={lenisRef}
+//         >
+//             {children}
+//         </ReactLenis>
+//     );
+// }
