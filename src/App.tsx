@@ -5,10 +5,7 @@ import Portfolio from '@/pages/Portfolio';
 import Lenis from 'lenis';
 import { useEffect } from 'react';
 import { ReactLenis } from '@/utils/lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 function App() {
     useEffect(() => {
@@ -22,7 +19,9 @@ function App() {
     return (
         <ThemeProvider defaultTheme="system" storageKey="ui-theme">
             <ReactLenis root />
-            <Portfolio />
+            <LanguageProvider>
+                <Portfolio />
+            </LanguageProvider>
         </ThemeProvider>
     );
 }

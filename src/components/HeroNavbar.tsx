@@ -1,4 +1,5 @@
 import { DownloadCVButton } from './DownloadCVButton';
+import { LanguageToggle } from './LanguageToggle';
 import { ModeToggle } from './ModeToggle';
 import NavbarLinks from './NavbarLinks';
 
@@ -10,6 +11,7 @@ export default function HeroNavbar() {
                 <div className="flex gap-4 items-center">
                     <DownloadCVButton />
                     <ModeToggle />
+                    <LanguageToggle />
                 </div>
             </div>
         </nav>

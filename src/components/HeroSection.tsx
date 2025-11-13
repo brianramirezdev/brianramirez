@@ -1,6 +1,7 @@
 import ContactLinks from './ContactLinks';
 import LogoLoop from './LogoLoop';
 import PixelBlast from './PixelBlast';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 import {
     SiTypescript,
@@ -45,6 +46,8 @@ const allLogos = [
 ];
 
 export default function HeroSection() {
+    const { t } = useLanguage();
+
     return (
         <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
@@ -64,8 +67,8 @@ export default function HeroSection() {
             </div>
 
             <div className="max-w-7xl w-full relative z-10 text-center space-y-6">
-                <h1 className="text-7xl md:text-9xl leading-none">Brian Ramírez</h1>
-                <p className="text-xl text-killua md:text-2xl max-w-2xl mx-auto">Desarrollador Full Stack especializado en aplicaciones web, IA y Big Data.</p>
+                <h1 className="text-7xl md:text-9xl leading-none">{t.hero.name}</h1>
+                <p className="text-xl text-killua md:text-2xl max-w-2xl mx-auto">{t.hero.title}</p>
 
                 <div className="flex justify-center">
                     <ContactLinks />
