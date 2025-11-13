@@ -8,7 +8,7 @@ export function useGsapCardsAnimation(ref: React.RefObject<HTMLElement | null>, 
     useLayoutEffect(() => {
         if (!ref.current) return;
         const ctx = gsap.context(() => {
-            gsap.utils.toArray(cardSelector).forEach((card, i) => {
+            gsap.utils.toArray<HTMLElement>(cardSelector).forEach((card, i) => {
                 gsap.fromTo(
                     card,
                     { y: 80 + i * 20, opacity: 0, scale: 0.9 },
