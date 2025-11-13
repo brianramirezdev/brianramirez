@@ -2,7 +2,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
-import { Globe, SquareCheck } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const languages = {
     es: {
