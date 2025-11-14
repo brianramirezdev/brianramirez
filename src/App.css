@@ -153,7 +153,7 @@
     }
 
     button {
-        @apply cursor-pointer hover:bg-accent hover:text-accent-foreground active:scale-95 transition-transform;
+        @apply cursor-pointer active:scale-95 transition-transform;
     }
 
     /* Chrome, Edge, Safari */

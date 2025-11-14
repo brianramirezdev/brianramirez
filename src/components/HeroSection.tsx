@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
 
             <div className="max-w-7xl w-full relative z-10 text-center space-y-6">
-                <h1 className="text-7xl md:text-9xl leading-none">{t.hero.name}</h1>
+                <h1 className="text-7xl md:text-9xl leading-none font-bold tracking-wide">{t.hero.name}</h1>
                 <p className="text-xl text-killua md:text-2xl max-w-2xl mx-auto">{t.hero.title}</p>
 
                 <div className="flex justify-center">
