@@ -58,11 +58,11 @@ export default function HeroSection() {
                     patternDensity={1}
                     liquid={false}
                     enableRipples={false}
-                    pixelSizeJitter={0}
+                    pixelSizeJitter={1}
                     noiseAmount={0}
-                    edgeFade={0.2}
+                    edgeFade={0.6}
                     transparent
-                    color="#f1f1f1"
+                    // color="#f1f1f1"
                 />
             </div>
 
