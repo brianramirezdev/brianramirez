@@ -29,7 +29,6 @@ export default function HeroNavbar() {
                         <SheetContent side="left" className="p-0 max-w-xs">
                             <div className="p-6 pt-12 space-y-8">
                                 <NavbarLinks />
-                                {/* Sólo en móvil */}
                                 <DownloadCVButton />
                             </div>
                         </SheetContent>
@@ -37,7 +36,7 @@ export default function HeroNavbar() {
                 </div>
 
                 {/* Botones a la derecha */}
-                <div className="flex gap-1 md:gap-4 items-center">
+                <div className="flex gap-2 md:gap-6 items-center">
                     {/* Solo escritorio */}
                     <div className="hidden md:block">
                         <DownloadCVButton />

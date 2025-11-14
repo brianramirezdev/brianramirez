@@ -49,7 +49,7 @@ export default function HeroSection() {
     const { t } = useLanguage();
 
     return (
-        <section id="hero" className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        <section id="hero" className="min-h-screen h-dvh flex flex-col items-center justify-center px-6 relative overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <PixelBlast
                     variant="square"
