@@ -2,6 +2,8 @@ import ContactLinks from './ContactLinks';
 import LogoLoop from './LogoLoop';
 import PixelBlast from './PixelBlast';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useRef } from 'react';
+import { useHeroRevealAnimation } from '@/hooks/useHeroRevealAnimation';
 
 import {
     SiTypescript,
@@ -47,10 +49,27 @@ const allLogos = [
 
 export default function HeroSection() {
     const { t } = useLanguage();
+    const heroRef = useRef<HTMLElement>(null);
+
+    useHeroRevealAnimation(heroRef, {
+        titleSelector: '.hero-title',
+        subtitleSelector: '.hero-subtitle',
+        logosSelector: '.hero-logos > *',
+        backgroundSelector: '.hero-background',
+    });
 
     return (
-        <section id="hero" className="h-dvh flex flex-col items-center justify-center px-6 relative overflow-hidden">
-            <div className="absolute inset-0 z-0 pointer-events-none">
+        <section
+            id="hero"
+            ref={heroRef}
+            className="
+        relative h-dvh w-full overflow-hidden
+        flex flex-col items-center justify-center
+        px-6 text-foreground
+    "
+        >
+            {/* Background */}
+            <div className="absolute inset-0 hero-background pointer-events-none z-0">
                 <PixelBlast
                     variant="square"
                     pixelSize={2}
@@ -60,22 +79,66 @@ export default function HeroSection() {
                     enableRipples={false}
                     pixelSizeJitter={1}
                     noiseAmount={0}
-                    edgeFade={0.6}
+                    edgeFade={0.55}
                     transparent
-                    // color="#f1f1f1"
                 />
             </div>
 
-            <div className="max-w-7xl w-full relative z-10 text-center space-y-6">
-                <h1 className="text-7xl md:text-9xl leading-none font-bold tracking-wide">{t.hero.name}</h1>
-                <p className="text-xl text-killua md:text-2xl max-w-2xl mx-auto">{t.hero.title}</p>
+            {/* Soft vignette for clarity */}
+            <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-background/10 to-background/40 z-1" />
 
-                <div className="flex justify-center">
+            {/* CONTENT */}
+            <div
+                className="
+            relative z-10
+            max-w-7xl w-full mx-auto
+            flex flex-col items-center text-center
+            space-y-10
+        "
+            >
+                {/* NAME */}
+                <h1
+                    className="
+                hero-title
+                font-bold leading-[0.95]
+                text-6xl md:text-8xl lg:text-[10rem]
+                tracking-[-0.02em]
+                bg-clip-text text-transparent
+                bg-linear-to-b from-foreground to-foreground/70
+                drop-shadow-sm
+            "
+                >
+                    {t.hero.name}
+                </h1>
+
+                {/* SUBTITLE */}
+                <p
+                    className="
+                hero-subtitle
+                max-w-3xl mx-auto
+                text-xl md:text-3xl font-light
+                text-killua/90
+                leading-relaxed tracking-wide
+            "
+                >
+                    {t.hero.title}
+                </p>
+
+                {/* Contact links */}
+                <div className="hero-contacts pt-4">
                     <ContactLinks />
                 </div>
             </div>
 
-            <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-full z-10">
+            {/* LOGO LOOP */}
+            <div
+                className="
+            hero-logos
+            absolute bottom-12 left-1/2 -translate-x-1/2
+            w-full max-w-7xl
+            z-10 opacity-95
+        "
+            >
                 <LogoLoop logos={allLogos} speed={30} gap={40} scaleOnHover pauseOnHover />
             </div>
         </section>
