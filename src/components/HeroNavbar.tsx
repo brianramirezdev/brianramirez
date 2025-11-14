@@ -36,13 +36,15 @@ export default function HeroNavbar() {
                 </div>
 
                 {/* Botones a la derecha */}
-                <div className="flex gap-2 md:gap-6 items-center">
+                <div className="flex md:gap-6 items-center">
                     {/* Solo escritorio */}
                     <div className="hidden md:block">
                         <DownloadCVButton />
                     </div>
-                    <ModeToggle />
-                    <LanguageToggle />
+                    <div className="flex gap-2 items-center">
+                        <ModeToggle />
+                        <LanguageToggle />
+                    </div>
                 </div>
             </div>
         </nav>
