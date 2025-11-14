@@ -34,6 +34,7 @@ export const es = {
     },
     works: {
         featuredTitle: 'Proyectos Destacados',
+        description: 'Una selección de proyectos que destacan mi experiencia en desarrollo full stack, desde aplicaciones web hasta soluciones empresariales.',
         projectImageAlt: 'Imagen del proyecto',
         badgeFeatured: 'DESTACADO',
         // Puedes añadir más campos si tienes botones como "Ver código" o "Ver proyecto"

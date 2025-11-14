@@ -34,12 +34,13 @@ export const en = {
     },
     works: {
         featuredTitle: 'Featured Projects',
+        description: 'manoloo',
         projectImageAlt: 'Project image',
         badgeFeatured: 'FEATURED',
     },
     contact: {
         title: "Let's Work",
-        together: 'Together',
+        together: 'Projects built with modern technologies like Laravel, React, TypeScript and Astro, focused on solving real problems with scalable architectures.',
         description: 'Currently available for freelance jobs and full-time opportunities. Feel free to contact me if you’d like to collaborate.',
         email: 'brianrd.dev@gmail.com',
         phone: '+34 611 15 47 64',

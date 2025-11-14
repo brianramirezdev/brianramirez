@@ -30,6 +30,7 @@ export interface Translations {
     };
     works: {
         featuredTitle: string;
+        description: string;
         projectImageAlt: string;
         badgeFeatured: string;
     };

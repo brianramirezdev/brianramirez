@@ -7,7 +7,7 @@ export const projects = [
         description: 'Web application that enhances restaurant service through QR codes, allowing customers to view the menu and place orders seamlessly.',
         tech: ['Laravel', 'jQuery', 'Tailwind', 'MySQL', 'PHP'],
         highlight: true,
-        image: './assets/queater.png',
+        image: './assets/queater.avif',
     },
     {
         title: 'JC Tus Asesores',
@@ -17,7 +17,7 @@ export const projects = [
             "Complete development of the corporate website using Astro and Tailwind CSS. Automated system for BOE data retrieval and full management of the hotel's IT infrastructure.",
         tech: ['Astro', 'Tailwind', 'JavaScript', 'MySQL'],
         highlight: true,
-        image: './assets/jctusasesores.png',
+        image: './assets/jctusasesores.avif',
     },
     {
         title: 'Vulca Comics',
@@ -27,6 +27,6 @@ export const projects = [
             'Comprehensive platform for managing games and tournaments, built with Laravel + React + Inertia. Features a modular admin panel, generic CRUD systems, reusable form components, and robust validation powered by FormRequest.',
         tech: ['Laravel', 'React', 'Inertia', 'TypeScript', 'Tailwind', 'MySQL'],
         highlight: true,
-        image: './assets/vulcacomics.png',
+        image: './assets/vulcacomics.avif',
     },
 ];

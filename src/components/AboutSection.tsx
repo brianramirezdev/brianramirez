@@ -2,13 +2,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Badge } from './ui/badge';
 import { skills as skillsEs } from '@/data/skills.es';
 import { skills as skillsEn } from '@/data/skills.en';
+import SectionLayout from '@/layouts/SectionLayout';
 
 export default function AboutSection() {
     const { language, t } = useLanguage();
     const skills = language === 'es' ? skillsEs : skillsEn;
 
     return (
-        <section id="about" className="min-h-screen flex items-center px-4 md:px-6 py-12 md:py-24">
+        <SectionLayout id="about">
             <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16">
                 {/* Info & Educación */}
                 <div>
@@ -51,6 +52,6 @@ export default function AboutSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionLayout>
     );
 }

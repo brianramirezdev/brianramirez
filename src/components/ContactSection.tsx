@@ -1,11 +1,12 @@
 import { Mail } from 'lucide-react';
 import ContactLinks from './ContactLinks';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SectionLayout from '@/layouts/SectionLayout';
 
 export default function ContactSection() {
     const { t } = useLanguage();
     return (
-        <section id="contact" data-scroll-section className=" flex px-4 md:px-6 py-12 md:py-24">
+        <SectionLayout id="contact">
             <div className="max-w-7xl mx-auto w-full">
                 <div className="max-w-3xl">
                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
@@ -29,6 +30,6 @@ export default function ContactSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionLayout>
     );
 }
