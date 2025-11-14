@@ -18,7 +18,7 @@ export default function WorksSection() {
     const projects = language === 'es' ? projectsEs : projectsEn;
 
     return (
-        <section id="work" ref={mainRef} className="card-container min-h-screen px-6 py-24 bg-secondary/30" aria-labelledby="works-heading">
+        <section id="works" ref={mainRef} className="card-container min-h-screen px-6 py-24 bg-secondary/30" aria-labelledby="works-heading">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 space-y-4">
                     <h2 id="works-heading" className="text-5xl font-bold tracking-tight bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
