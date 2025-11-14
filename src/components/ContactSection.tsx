@@ -5,23 +5,23 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function ContactSection() {
     const { t } = useLanguage();
     return (
-        <section id="contact" data-scroll-section className="min-h-screen flex items-center px-6 py-24">
+        <section id="contact" data-scroll-section className=" flex px-4 md:px-6 py-12 md:py-24">
             <div className="max-w-7xl mx-auto w-full">
                 <div className="max-w-3xl">
-                    <h2 className="text-6xl md:text-7xl font-bold mb-8 tracking-tight">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 tracking-tight">
                         {t.contact.title}
-                        <span className="ml-4 text-killua">{t.contact.together}</span>
+                        <span className="block md:inline ml-0 md:ml-4 text-killua">{t.contact.together}</span>
                     </h2>
 
-                    <p className="text-xl text-muted-foreground mb-12">{t.contact.description}</p>
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12">{t.contact.description}</p>
 
                     <div className="space-y-6">
-                        <a href="mailto:brianrd.dev@gmail.com" className="flex items-center gap-4 text-2xl hover:text-killua transition-colors group">
+                        <a href="mailto:brianrd.dev@gmail.com" className="flex items-center gap-3 md:gap-4 text-lg md:text-2xl hover:text-killua transition-colors group break-all">
                             <Mail className="group-hover:scale-110 mt-1 transition-transform" />
                             {t.contact.email}
                         </a>
 
-                        <a href="tel:+34611154764" className="flex items-center gap-4 text-2xl hover:text-killua transition-colors">
+                        <a href="tel:+34611154764" className="flex items-center gap-3 md:gap-4 text-lg md:text-2xl hover:text-killua transition-colors">
                             {t.contact.phone}
                         </a>
 

@@ -8,19 +8,20 @@ export default function AboutSection() {
     const skills = language === 'es' ? skillsEs : skillsEn;
 
     return (
-        <section id="about" className="min-h-screen flex items-center px-6 py-24">
-            <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-16">
+        <section id="about" className="min-h-screen flex items-center px-4 md:px-6 py-12 md:py-24">
+            <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16">
+                {/* Info & Educación */}
                 <div>
-                    <h2 className="text-5xl font-bold mb-8 tracking-tight">{t.about.title}</h2>
-                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 tracking-tight">{t.about.title}</h2>
+                    <div className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed">
                         {t.about.bio.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
                     </div>
 
-                    <div className="mt-12">
-                        <h3 className="text-xl font-semibold mb-4 text-killua">Educación</h3>
-                        <div className="space-y-4 text-muted-foreground">
+                    <div className="mt-8 md:mt-12">
+                        <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-killua">Educación</h3>
+                        <div className="space-y-3 md:space-y-4 text-muted-foreground">
                             {t.about.educationList.map((education, index) => (
                                 <div key={index}>
                                     <p className="font-medium text-foreground">{education.degree}</p>
@@ -31,13 +32,13 @@ export default function AboutSection() {
                     </div>
                 </div>
 
-                <div>
-                    <h3 className="text-3xl font-bold mb-8 tracking-tight">{t.about.skillsTitle}</h3>
-
-                    <div className="space-y-8">
+                {/* Skills */}
+                <div className="mt-12 md:mt-0">
+                    <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 tracking-tight">{t.about.skillsTitle}</h3>
+                    <div className="space-y-6 md:space-y-8">
                         {skills.map((section) => (
                             <div key={section.category}>
-                                <h4 className="text-killua font-semibold mb-3 text-md tracking-wider">{section.label}</h4>
+                                <h4 className="text-killua font-semibold mb-2 md:mb-3 text-sm md:text-md tracking-wider">{section.label}</h4>
                                 <div className="flex flex-wrap gap-2">
                                     {section.items.map((skill) => (
                                         <Badge key={skill} variant="outline" className="hover:border-killua hover:text-killua rounded-sm">
