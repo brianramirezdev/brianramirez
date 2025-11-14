@@ -2,7 +2,7 @@
 export const es = {
     navbar: {
         about: 'Sobre mí',
-        works: 'Trabajos',
+        projects: 'Proyectos',
         contact: 'Contacto',
     },
     hero: {
@@ -32,12 +32,10 @@ export const es = {
         backend: 'BACKEND & DATABASE',
         tools: 'HERRAMIENTAS & DISEÑO',
     },
-    works: {
+    projects: {
         featuredTitle: 'Proyectos Destacados',
         description: 'Una selección de proyectos que destacan mi experiencia en desarrollo full stack, desde aplicaciones web hasta soluciones empresariales.',
         projectImageAlt: 'Imagen del proyecto',
-        badgeFeatured: 'DESTACADO',
-        // Puedes añadir más campos si tienes botones como "Ver código" o "Ver proyecto"
     },
     contact: {
         title: 'Trabajemos',

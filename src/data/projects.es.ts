@@ -25,7 +25,7 @@ export const projects = [
         description:
             'Plataforma integral para gestionar juegos y torneos, creada con Laravel + React + Inertia. Cuenta con panel administrativo modular, CRUDs genéricos, formularios y modales reutilizables, y validaciones sólidas mediante FormRequest, todo bajo una arquitectura escalable y coherente.',
         tech: ['Laravel', 'React', 'Inertia', 'TypeScript', 'Tailwind', 'MySQL'],
-        highlight: true,
+        highlight: false,
         image: './assets/vulcacomics.avif',
     },
 ];

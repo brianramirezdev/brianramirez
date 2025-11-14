@@ -3,7 +3,11 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import WorksSection from '@/components/WorksSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
     return (
@@ -11,7 +15,7 @@ const Portfolio = () => {
             <HeroNavbar />
             <HeroSection />
             <AboutSection />
-            <WorksSection />
+            <ProjectsSection />
             <ContactSection />
             <Footer />
         </>

@@ -46,11 +46,11 @@ export function ProjectCard({ project, projectImageAlt }: ProjectCardProps) {
                                 <img
                                     src={project.image}
                                     alt={`${project.title} - ${projectImageAlt}`}
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    className="h-full w-full object-cover transition-transform duration-300  group-hover:saturate-110 group-hover:scale-105"
                                     loading="lazy"
                                 />
                                 {/* Overlay oscuro en hover para mejor contraste */}
-                                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                <div className="absolute inset-0 bg-linear-to-t from-white/30 via-white/10 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             </>
                         ) : (
                             <div className="flex h-full items-center justify-center text-muted-foreground">

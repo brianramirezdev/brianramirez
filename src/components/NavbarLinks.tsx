@@ -7,8 +7,8 @@ export default function NavbarLinks() {
             <a href="#about" className="hover:text-killua transition-colors">
                 {t.navbar.about}
             </a>
-            <a href="#works" className="hover:text-killua transition-colors">
-                {t.navbar.works}
+            <a href="#projects" className="hover:text-killua transition-colors">
+                {t.navbar.projects}
             </a>
             <a href="#contact" className="hover:text-killua transition-colors">
                 {t.navbar.contact}

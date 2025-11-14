@@ -8,7 +8,7 @@ export type TranslationValue = string | string[] | Record<string, any>;
 export interface Translations {
     navbar: {
         about: string;
-        works: string;
+        projects: string;
         contact: string;
     };
     hero: {
@@ -28,11 +28,10 @@ export interface Translations {
         backend: string;
         tools: string;
     };
-    works: {
+    projects: {
         featuredTitle: string;
         description: string;
         projectImageAlt: string;
-        badgeFeatured: string;
     };
     contact: {
         title: string;

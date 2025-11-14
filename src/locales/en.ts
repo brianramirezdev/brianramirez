@@ -2,7 +2,7 @@
 export const en = {
     navbar: {
         about: 'About',
-        works: 'Works',
+        projects: 'Projects',
         contact: 'Contact',
     },
     hero: {
@@ -32,11 +32,10 @@ export const en = {
         backend: 'BACKEND & DATABASE',
         tools: 'TOOLS & DESIGN',
     },
-    works: {
+    projects: {
         featuredTitle: 'Featured Projects',
         description: 'Projects built with modern technologies like Laravel, React, TypeScript and Astro, focused on solving real problems with scalable architectures.',
         projectImageAlt: 'Project image',
-        badgeFeatured: 'FEATURED',
     },
     contact: {
         title: "Let's Work",

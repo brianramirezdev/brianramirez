@@ -1,57 +1,97 @@
+// src/components/AboutSection.tsx
+import { useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Badge } from './ui/badge';
+import { Badge } from '@/components/ui/badge';
+import SectionLayout from '@/layouts/SectionLayout';
+
+import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
+
 import { skills as skillsEs } from '@/data/skills.es';
 import { skills as skillsEn } from '@/data/skills.en';
-import SectionLayout from '@/layouts/SectionLayout';
 
 export default function AboutSection() {
     const { language, t } = useLanguage();
     const skills = language === 'es' ? skillsEs : skillsEn;
 
+    const aboutRef = useRef<HTMLElement>(null);
+
+    // Nuevo hook con animación artística premium
+    useGsapFloatReveal(aboutRef, '.gsap-reveal');
+
     return (
         <SectionLayout id="about">
-            <div className="max-w-7xl mx-auto w-full flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-16">
-                {/* Info & Educación */}
-                <div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-8 tracking-tight">{t.about.title}</h2>
-                    <div className="space-y-3 md:space-y-4 text-muted-foreground leading-relaxed">
-                        {t.about.bio.map((paragraph, index) => (
-                            <p key={index}>{paragraph}</p>
-                        ))}
+            <section ref={aboutRef} className="relative w-full px-6 py-28 max-w-7xl mx-auto" aria-labelledby="about-heading">
+                <div className="grid md:grid-cols-2 gap-20">
+                    {/* LEFT */}
+                    <div className="space-y-10">
+                        <header className="space-y-4">
+                            <h2
+                                id="about-heading"
+                                className="gsap-reveal text-5xl md:text-6xl font-bold tracking-tight
+                                           bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/60"
+                            >
+                                {t.about.title}
+                            </h2>
+
+                            <div className="gsap-reveal h-1 w-20 bg-killua/80 rounded-full"></div>
+                        </header>
+
+                        <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-xl">
+                            {t.about.bio.map((p: string, idx: number) => (
+                                <p key={idx} className="gsap-reveal">
+                                    {p}
+                                </p>
+                            ))}
+                        </div>
+
+                        {/* Education */}
+                        <div className="space-y-6 pt-4">
+                            <h3 className="gsap-reveal text-2xl font-semibold tracking-wide text-killua">{t.about.title ?? 'Educación'}</h3>
+
+                            <div className="grid gap-5">
+                                {t.about.educationList.map((edu: any, i: number) => (
+                                    <div key={i} className="gsap-reveal">
+                                        <p className="text-lg font-medium text-foreground">{edu.degree}</p>
+                                        <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="mt-8 md:mt-12">
-                        <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-killua">Educación</h3>
-                        <div className="space-y-3 md:space-y-4 text-muted-foreground">
-                            {t.about.educationList.map((education, index) => (
-                                <div key={index}>
-                                    <p className="font-medium text-foreground">{education.degree}</p>
-                                    <p className="text-sm">{education.institution}</p>
+                    {/* RIGHT - SKILLS */}
+                    <div className="space-y-12">
+                        <h3
+                            className="gsap-reveal text-4xl font-bold tracking-tight mb-6
+                                       bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/60"
+                        >
+                            {t.about.skillsTitle}
+                        </h3>
+
+                        <div className="space-y-10">
+                            {skills.map((section) => (
+                                <div key={section.category} className="gsap-reveal">
+                                    <h4 className="text-sm md:text-md font-semibold text-killua/90 tracking-widest mb-3 uppercase">{section.label}</h4>
+
+                                    <div className="flex flex-wrap gap-3">
+                                        {section.items.map((skill: string) => (
+                                            <Badge
+                                                key={skill}
+                                                variant="secondary"
+                                                className="rounded-sm px-3 py-1 text-xs font-medium
+                                                           bg-background/60 border border-border/40
+                                                           hover:bg-killua/10 hover:text-killua transition-colors"
+                                            >
+                                                {skill}
+                                            </Badge>
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-
-                {/* Skills */}
-                <div className="mt-12 md:mt-0">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 tracking-tight">{t.about.skillsTitle}</h3>
-                    <div className="space-y-6 md:space-y-8">
-                        {skills.map((section) => (
-                            <div key={section.category}>
-                                <h4 className="text-killua font-semibold mb-2 md:mb-3 text-sm md:text-md tracking-wider">{section.label}</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {section.items.map((skill) => (
-                                        <Badge key={skill} variant="outline" className="hover:border-killua hover:text-killua rounded-sm">
-                                            {skill}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+            </section>
         </SectionLayout>
     );
 }

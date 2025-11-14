@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function useGsapCardsAnimation(ref: React.RefObject<HTMLElement | null>, cardSelector = '.gsap-card') {
+export function useGsapScrollReveal(ref: React.RefObject<HTMLElement | null>, cardSelector = '.gsap-card') {
     useLayoutEffect(() => {
         if (!ref.current) return;
         const ctx = gsap.context(() => {
