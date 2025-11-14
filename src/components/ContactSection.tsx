@@ -37,8 +37,8 @@ export default function ContactSection() {
                         </a>
 
                         {/* Phone */}
-                        <a href="tel:+34611154764" className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all">
-                            <Phone className="w-6 h-6 transition-transform" />
+                        <a href="tel:+34611154764" className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all group">
+                            <Phone className="w-6 h-6 transition-transform group-hover:scale-110" />
                             {t.contact.phone}
                         </a>
 
