@@ -7,7 +7,7 @@ import { ModeToggle } from './ModeToggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
-import { Menu, X, User, Briefcase, Mail, Download } from 'lucide-react';
+import { Menu, X, User, Briefcase, Mail } from 'lucide-react';
 
 export default function Navbar() {
     const { t } = useLanguage();
