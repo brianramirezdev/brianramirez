@@ -36,13 +36,29 @@ export interface Translations {
     contact: {
         title: string;
         together: string;
+        tagline: string;
         description: string;
         email: string;
         phone: string;
+        closingMessage: string;
     };
     footer: {
         copyright: string;
         location: string;
+
+        ctaTitle: string;
+        ctaDescription: string;
+
+        colAboutTitle: string;
+        colAboutText: string;
+
+        colLocationTitle: string;
+        colWorld: string;
+
+        colContactTitle: string;
+
+        rights: string;
+        crafted: string;
     };
     downloadCV: {
         label: string;

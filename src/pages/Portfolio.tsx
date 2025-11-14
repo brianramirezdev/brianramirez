@@ -1,4 +1,4 @@
-import HeroNavbar from '@/components/HeroNavbar';
+import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Portfolio = () => {
     return (
         <>
-            <HeroNavbar />
+            <Navbar />
             <HeroSection />
             <AboutSection />
             <ProjectsSection />

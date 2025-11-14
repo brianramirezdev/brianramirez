@@ -40,13 +40,29 @@ export const en = {
     contact: {
         title: "Let's Work",
         together: 'Together',
+        tagline: "Let's build something that truly matters — from small ideas to complete products.",
         description: 'Currently available for freelance jobs and full-time opportunities. Feel free to contact me if you’d like to collaborate.',
         email: 'brianrd.dev@gmail.com',
         phone: '+34 611 15 47 64',
+        closingMessage: "I'm open to collaborating on interesting projects, consulting, or simply chatting about ideas. Reach out anytime — I usually reply quickly.",
     },
     footer: {
         copyright: '© 2025 Brian Ramírez',
         location: 'Las Palmas de Gran Canaria, ES',
+
+        ctaTitle: 'Let’s build the next big thing.',
+        ctaDescription: 'Whether it’s a product, an idea, or a challenge — I’d love to help shape it into something meaningful.',
+
+        colAboutTitle: 'ABOUT ME',
+        colAboutText: 'Frontend developer passionate about building polished, high-performance digital experiences.',
+
+        colLocationTitle: 'LOCATION',
+        colWorld: 'Available worldwide.',
+
+        colContactTitle: 'CONTACT',
+
+        rights: 'All rights reserved.',
+        crafted: 'Crafted with passion, patience, and pixels.',
     },
     downloadCV: {
         label: 'Download CV',

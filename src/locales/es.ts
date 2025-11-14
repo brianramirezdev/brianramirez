@@ -40,13 +40,30 @@ export const es = {
     contact: {
         title: 'Trabajemos',
         together: 'Juntos',
+        tagline: 'Construyamos algo que realmente importe — desde ideas pequeñas hasta productos completos.',
         description: 'Actualmente disponible para trabajos freelance y oportunidades a tiempo completo. No dudes en contactarme si te gustaría colaborar.',
         email: 'brianrd.dev@gmail.com',
         phone: '+34 611 15 47 64',
+        closingMessage:
+            'Estoy abierto a colaborar en proyectos interesantes, consultorías, o simplemente conversar sobre ideas. Escríbeme cuando quieras — suelo responder rápido.',
     },
     footer: {
         copyright: '© 2025 Brian Ramírez',
         location: 'Las Palmas de Gran Canaria, ES',
+
+        ctaTitle: 'Construyamos algo grande.',
+        ctaDescription: 'Ya sea un producto, una idea o un desafío, me encantaría ayudarte a convertirlo en algo significativo.',
+
+        colAboutTitle: 'SOBRE MÍ',
+        colAboutText: 'Desarrollador frontend apasionado por crear experiencias digitales pulidas y de alto rendimiento.',
+
+        colLocationTitle: 'UBICACIÓN',
+        colWorld: 'Disponible globalmente.',
+
+        colContactTitle: 'CONTACTO',
+
+        rights: 'Todos los derechos reservados.',
+        crafted: 'Creado con pasión, paciencia y píxeles.',
     },
     downloadCV: {
         label: 'Descargar CV',
