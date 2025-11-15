@@ -16,7 +16,7 @@ export default function ContactSection() {
 
     return (
         <SectionLayout id="contact" ref={contactRef}>
-            <div className="max-w-7xl w-full mx-auto py-30 items-center justify-center flex flex-col lg:flex-row gap-12 lg:gap-20">
+            <div className="max-w-7xl w-full mx-auto py-30 flex flex-col lg:flex-row gap-12 lg:gap-20">
                 {/* Left column (text content) */}
                 <div className="w-full max-w-3xl space-y-10">
                     <div className="space-y-3 gsap-reveal">
@@ -47,11 +47,7 @@ export default function ContactSection() {
 
                     <p className="gsap-reveal text-muted-foreground text-base md:text-lg max-w-xl leading-relaxed pt-4">{t.contact.closingMessage}</p>
                 </div>
-
-                {/* Right column (contact form) */}
-                <div className="w-full lg:max-w-md mt-4">
-                    <ContactForm />
-                </div>
+                <ContactForm />
             </div>
         </SectionLayout>
     );
