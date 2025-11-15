@@ -46,7 +46,7 @@ export default function AboutSection() {
 
                         {/* Education */}
                         <div className="space-y-6 pt-4">
-                            <h3 className="gsap-reveal text-2xl font-semibold tracking-wide text-killua">{t.about.title ?? 'Educación'}</h3>
+                            <h3 className="gsap-reveal text-2xl font-semibold tracking-wide text-killua">{t.about.education}</h3>
 
                             <div className="grid gap-5">
                                 {t.about.educationList.map((edu: any, i: number) => (
