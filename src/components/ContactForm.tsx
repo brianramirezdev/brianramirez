@@ -81,85 +81,100 @@ export default function ContactForm() {
     }, [t]);
 
     return (
-        <div className="gsap-card w-lg lg:max-w-xl m-auto">
-            <Card className=" p-6 border-2 space-y-12">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <FieldSet>
-                        <FieldLegend className="text-center text-2xl font-bold flex flex-col items-center">
-                            <div className="w-12 h-12 bg-killua/10 rounded-full flex items-center justify-center mb-3">
-                                <Mail className="h-6 w-6 text-killua" />
+        <div className="gsap-card w-full px-4 sm:px-6 md:px-0">
+            <div className="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+                <Card className="p-4 sm:p-6 border-2 space-y-10 sm:space-y-12">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <FieldSet className="space-y-6 sm:space-y-8">
+                            {/* HEADER */}
+                            <FieldLegend className="text-center text-xl sm:text-2xl font-bold flex flex-col items-center">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-killua/10 rounded-full flex items-center justify-center mb-3">
+                                    <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-killua" />
+                                </div>
+                                {t.contactForm.title}
+                            </FieldLegend>
+
+                            <FieldGroup className="space-y-6">
+                                {/* NAME */}
+                                <Field>
+                                    <FieldLabel className="flex items-center gap-2 text-sm sm:text-base">
+                                        <User className="h-4 w-4 text-killua" />
+                                        {t.contactForm.name}
+                                    </FieldLabel>
+                                    <Input placeholder={t.contactForm.placeholders.name} disabled={isSubmitting} {...register('name')} className="text-sm sm:text-base" />
+                                    {errors.name && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.name.message}</FieldDescription>}
+                                </Field>
+
+                                {/* EMAIL */}
+                                <Field>
+                                    <FieldLabel className="flex items-center gap-2 text-sm sm:text-base">
+                                        <Mail className="h-4 w-4 text-killua" />
+                                        {t.contactForm.email}
+                                    </FieldLabel>
+                                    <Input
+                                        type="email"
+                                        placeholder={t.contactForm.placeholders.email}
+                                        disabled={isSubmitting}
+                                        {...register('email')}
+                                        className="text-sm sm:text-base"
+                                    />
+                                    {errors.email && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.email.message}</FieldDescription>}
+                                </Field>
+
+                                {/* MESSAGE */}
+                                <Field>
+                                    <FieldLabel className="flex items-center gap-2 text-sm sm:text-base">
+                                        <MessageSquare className="h-4 w-4 text-killua" />
+                                        {t.contactForm.message}
+                                    </FieldLabel>
+                                    <Textarea
+                                        placeholder={t.contactForm.placeholders.message}
+                                        rows={5}
+                                        disabled={isSubmitting}
+                                        {...register('message')}
+                                        className="text-sm sm:text-base"
+                                    />
+                                    {errors.message && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.message.message}</FieldDescription>}
+                                </Field>
+                            </FieldGroup>
+
+                            <FieldSeparator />
+
+                            {/* BUTTON */}
+                            <Field>
+                                <Button type="submit" className="w-full py-3 sm:py-4 text-sm sm:text-base" size="lg" disabled={isSubmitting}>
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                            {t.contactForm.sending}
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send className="mr-2 h-4 w-4" />
+                                            {t.contactForm.submit}
+                                        </>
+                                    )}
+                                </Button>
+                            </Field>
+                        </FieldSet>
+
+                        {/* SUCCESS */}
+                        {submitStatus === 'success' && (
+                            <div className="flex items-center gap-2 p-3 sm:p-4 mt-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-600 text-sm sm:text-base">
+                                <CheckCircle2 className="h-5 w-5" />
+                                <p className="font-medium">{t.contactForm.status.success}</p>
                             </div>
-                            {t.contactForm.title}
-                        </FieldLegend>
+                        )}
 
-                        <FieldGroup>
-                            {/* NAME */}
-                            <Field>
-                                <FieldLabel className="flex items-center gap-2">
-                                    <User className="h-4 w-4 text-killua" />
-                                    {t.contactForm.name}
-                                </FieldLabel>
-                                <Input placeholder={t.contactForm.placeholders.name} disabled={isSubmitting} {...register('name')} />
-                                <div className="h-1">{errors.name && <FieldDescription className="text-red-500 italic">{errors.name.message}</FieldDescription>}</div>
-                            </Field>
-
-                            {/* EMAIL */}
-                            <Field>
-                                <FieldLabel className="flex items-center gap-2">
-                                    <Mail className="h-4 w-4 text-killua" />
-                                    {t.contactForm.email}
-                                </FieldLabel>
-                                <Input type="email" placeholder={t.contactForm.placeholders.email} disabled={isSubmitting} {...register('email')} />
-                                <div className="h-1">{errors.email && <FieldDescription className="text-red-500 italic">{errors.email.message}</FieldDescription>}</div>
-                            </Field>
-
-                            {/* MESSAGE */}
-                            <Field>
-                                <FieldLabel className="flex items-center gap-2">
-                                    <MessageSquare className="h-4 w-4 text-killua" />
-                                    {t.contactForm.message}
-                                </FieldLabel>
-                                <Textarea placeholder={t.contactForm.placeholders.message} rows={6} disabled={isSubmitting} {...register('message')} />
-
-                                <div className="h-1">{errors.message && <FieldDescription className="text-red-500 italic">{errors.message.message}</FieldDescription>}</div>
-                            </Field>
-                        </FieldGroup>
-
-                        <FieldSeparator />
-
-                        {/* BUTTON */}
-                        <Field>
-                            <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-                                {isSubmitting ? (
-                                    <>
-                                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                        {t.contactForm.sending}
-                                    </>
-                                ) : (
-                                    <>
-                                        <Send className="mr-2 h-4 w-4" />
-                                        {t.contactForm.submit}
-                                    </>
-                                )}
-                            </Button>
-                        </Field>
-                    </FieldSet>
-
-                    {/* SUCCESS / ERROR */}
-                    {submitStatus === 'success' && (
-                        <div className="flex items-center gap-2 p-4 mt-4 bg-green-500/10 border border-green-500/20 rounded-lg text-green-600">
-                            <CheckCircle2 className="h-5 w-5" />
-                            <p className="text-sm font-medium">{t.contactForm.status.success}</p>
-                        </div>
-                    )}
-
-                    {submitStatus === 'error' && (
-                        <div className="flex items-center gap-2 p-4 mt-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-600">
-                            <p className="text-sm font-medium">{t.contactForm.status.error}</p>
-                        </div>
-                    )}
-                </form>
-            </Card>
+                        {/* ERROR */}
+                        {submitStatus === 'error' && (
+                            <div className="flex items-center gap-2 p-3 sm:p-4 mt-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-600 text-sm sm:text-base">
+                                <p className="font-medium">{t.contactForm.status.error}</p>
+                            </div>
+                        )}
+                    </form>
+                </Card>
+            </div>
         </div>
     );
 }
