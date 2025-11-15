@@ -15,8 +15,6 @@ export function useHeroRevealAnimation(
     }
 ) {
     useLayoutEffect(() => {
-        console.log('FOUND:', document.querySelectorAll('.hero-contacts a[data-slot="button"]'));
-
         const ctx = gsap.context(() => {
             const { titleSelector = '.hero-title', subtitleSelector = '.hero-subtitle', logosSelector = '.hero-logos > *', backgroundSelector = '.hero-background' } = config || {};
 

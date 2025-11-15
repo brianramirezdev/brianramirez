@@ -26,6 +26,7 @@ import {
     SiPusher,
     SiHostinger,
     SiNetlify,
+    SiVercel,
 } from '@icons-pack/react-simple-icons';
 
 const allLogos = [
@@ -49,6 +50,7 @@ const allLogos = [
     { node: <SiGitlab size={36} title="GitLab" /> },
     { node: <SiHostinger size={36} title="Hostinger" /> },
     { node: <SiNetlify size={36} title="Netlify" /> },
+    { node: <SiVercel size={36} title="Vercel" /> },
 ];
 
 export default function HeroSection() {
