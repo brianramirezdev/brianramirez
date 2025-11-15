@@ -66,7 +66,6 @@ export function useHeroRevealAnimation(
             ).to(
                 subtitleSelector,
                 {
-                    color: '#killua',
                     duration: 0.5,
                     repeat: 1,
                     yoyo: true,

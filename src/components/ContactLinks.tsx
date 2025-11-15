@@ -17,7 +17,7 @@ const contactLinks: contactLink[] = [
 
 export default function ContactLinks() {
     return (
-        <div className="flex gap-6 pt-8">
+        <div className="flex gap-6">
             {contactLinks.map((link, index) => (
                 <Button key={index} variant="outline" size="icon" className="hover:text-killua rounded-md" asChild>
                     <a href={link.url} target="_blank" rel="noopener noreferrer">

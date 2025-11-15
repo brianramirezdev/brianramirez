@@ -116,20 +116,10 @@ export default function HeroSection() {
                 </h1>
 
                 {/* SUBTITLE */}
-                <p
-                    className="
-                hero-subtitle
-                max-w-3xl mx-auto
-                text-xl md:text-3xl font-light
-                text-killua/90
-                leading-relaxed tracking-wide
-            "
-                >
-                    {t.hero.title}
-                </p>
+                <p className="hero-subtitle max-w-3xl mx-auto text-xl md:text-3xl font-light text-killua leading-relaxed tracking-wide">{t.hero.title}</p>
 
                 {/* Contact links */}
-                <div className="hero-contacts pt-4">
+                <div className="hero-contacts">
                     <ContactLinks />
                 </div>
             </div>
