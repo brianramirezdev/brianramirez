@@ -11,7 +11,7 @@ import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSet, FieldLegend,
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
-import { Mail, User, MessageSquare, Send, Loader2, CheckCircle2 } from 'lucide-react';
+import { Mail, User, MessageSquare, Send, Loader2, CheckCircle2, SendHorizonal } from 'lucide-react';
 
 const makeContactFormSchema = (t: any) =>
     z.object({
@@ -81,16 +81,9 @@ export default function ContactForm() {
     }, [t]);
 
     return (
-        <Card className="gsap-card border-none w-full mt-12 lg:mt-4 shadow-none space-y-10 sm:space-y-12 sm:max-w-md md:max-w-lg mx-auto">
+        <Card className="gsap-card border-none w-full bg-transparent mt-12 lg:mt-8 shadow-none space-y-10 sm:space-y-12 sm:max-w-md md:max-w-lg mx-auto">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <FieldSet className="sm:space-y-8">
-                    {/* HEADER */}
-                    <FieldLegend className="text-xl sm:text-2xl font-bold flex items-center mb-12 gap-4">
-                        <div className="w-10 h-10 sm:w-12 sm:h-12 bg-killua/10 rounded-md flex items-center justify-center">
-                            <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-killua" />
-                        </div>
-                    </FieldLegend>
-
                     <FieldGroup className="space-y-6">
                         {/* NAME */}
                         <Field>
@@ -98,7 +91,7 @@ export default function ContactForm() {
                                 <User className="h-4 w-4 text-killua" />
                                 {t.contactForm.name}
                             </FieldLabel>
-                            <Input placeholder={t.contactForm.placeholders.name} disabled={isSubmitting} {...register('name')} className="text-sm sm:text-base" />
+                            <Input placeholder={t.contactForm.placeholders.name} disabled={isSubmitting} {...register('name')} className="text-sm sm:text-base h-12" />
                             {errors.name && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.name.message}</FieldDescription>}
                         </Field>
 
@@ -108,7 +101,13 @@ export default function ContactForm() {
                                 <Mail className="h-4 w-4 text-killua" />
                                 {t.contactForm.email}
                             </FieldLabel>
-                            <Input type="email" placeholder={t.contactForm.placeholders.email} disabled={isSubmitting} {...register('email')} className="text-sm sm:text-base" />
+                            <Input
+                                type="email"
+                                placeholder={t.contactForm.placeholders.email}
+                                disabled={isSubmitting}
+                                {...register('email')}
+                                className="text-sm sm:text-base h-12"
+                            />
                             {errors.email && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.email.message}</FieldDescription>}
                         </Field>
 
@@ -118,7 +117,13 @@ export default function ContactForm() {
                                 <MessageSquare className="h-4 w-4 text-killua" />
                                 {t.contactForm.message}
                             </FieldLabel>
-                            <Textarea placeholder={t.contactForm.placeholders.message} rows={5} disabled={isSubmitting} {...register('message')} className="text-sm sm:text-base" />
+                            <Textarea
+                                placeholder={t.contactForm.placeholders.message}
+                                rows={5}
+                                disabled={isSubmitting}
+                                {...register('message')}
+                                className="text-sm sm:text-base min-h-[130px]"
+                            />
                             {errors.message && <FieldDescription className="text-red-500 italic mt-1 text-xs sm:text-sm">{errors.message.message}</FieldDescription>}
                         </Field>
                     </FieldGroup>
