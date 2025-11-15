@@ -36,9 +36,10 @@ export default function Navbar() {
 
     return (
         <nav
+            id="navbar-root"
             className={`
-                fixed top-0 w-full z-50 transition-all duration-300
-                ${scrolled ? 'bg-background/95 backdrop-blur-lg border-b shadow-sm' : 'bg-background/80 backdrop-blur-md border-b border-border/50'}
+                fixed top-0 w-full py-4 z-50 transition-all duration-300
+                ${scrolled ? 'bg-background/95 backdrop-blur-lg border-b shadow-sm' : 'bg-transparent backdrop-blur-none border-none'}
             `}
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6 h-16">

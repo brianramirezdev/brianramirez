@@ -16,15 +16,7 @@ export default function ContactSection() {
 
     return (
         <SectionLayout id="contact" ref={contactRef}>
-            {/*
-                🔥 Cambios importantes:
-                - flex-col en móvil/tablet
-                - lg:flex-row en pantallas grandes
-                - gap-12 para separar columnas
-                - justify-between para versión desktop
-                - w-full para ambos elementos
-            */}
-            <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 justify-between">
+            <div className="max-w-7xl w-full mx-auto py-30 items-center justify-center flex flex-col lg:flex-row gap-12 lg:gap-20">
                 {/* Left column (text content) */}
                 <div className="w-full max-w-3xl space-y-10">
                     <div className="space-y-3 gsap-reveal">

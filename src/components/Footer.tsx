@@ -8,16 +8,18 @@ export default function Footer() {
     const footerRef = useRef<HTMLElement>(null);
 
     useFooterRevealParallax(footerRef, {
-        footerSelector: '.footer-root',
         backgroundSelector: '.footer-bg',
     });
 
     return (
-        <footer ref={footerRef} className="footer-root relative mt-32 bg-background/30 backdrop-blur-xl border-t border-foreground/10 pt-20 pb-12 px-6 overflow-hidden">
+        <footer
+            ref={footerRef}
+            className={`footer-root flex relative justify-center items-center bg-background/30 backdrop-blur-xl border-t border-foreground/10 px-6 pt-20 pb-6 overflow-hidden sm:h-[calc(100dvh-97px)]`}
+        >
             {/* Artistic soft background */}
             <div className="footer-bg absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-foreground/5 to-transparent opacity-20" />
 
-            <div className="relative max-w-7xl mx-auto flex flex-col gap-20">
+            <div className="footer-inner relative max-w-7xl mx-auto flex flex-col gap-20">
                 {/* CTA */}
                 <div className="flex flex-col items-center text-center gap-6">
                     <h2
@@ -38,20 +40,20 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground">
                     {/* ABOUT */}
                     <div className="space-y-3">
-                        <h3 className="text-sm font-semibold tracking-wide text-foreground">{t.footer.colAboutTitle}</h3>
+                        <h3 className="text-sm  font-semibold tracking-wide text-killua">{t.footer.colAboutTitle}</h3>
                         <p>{t.footer.colAboutText}</p>
                     </div>
 
                     {/* LOCATION */}
                     <div className="space-y-3">
-                        <h3 className="text-sm font-semibold tracking-wide text-foreground">{t.footer.colLocationTitle}</h3>
+                        <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colLocationTitle}</h3>
                         <p>{t.footer.location}</p>
                         {/* <p className="opacity-60">{t.footer.colWorld}</p> */}
                     </div>
 
                     {/* CONTACT */}
                     <div className="space-y-3">
-                        <h3 className="text-sm font-semibold tracking-wide text-foreground">{t.footer.colContactTitle}</h3>
+                        <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colContactTitle}</h3>
 
                         <a href="mailto:brianrd.dev@gmail.com" className="hover:text-killua transition-colors block">
                             brianrd.dev@gmail.com
