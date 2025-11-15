@@ -7,11 +7,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSet, FieldLegend, FieldSeparator } from '@/components/ui/field';
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSet, FieldSeparator } from '@/components/ui/field';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
-import { Mail, User, MessageSquare, Send, Loader2, CheckCircle2, SendHorizonal } from 'lucide-react';
+import { Mail, User, MessageSquare, Send, Loader2, CheckCircle2 } from 'lucide-react';
 
 const makeContactFormSchema = (t: any) =>
     z.object({
