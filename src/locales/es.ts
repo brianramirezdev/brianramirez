@@ -4,6 +4,9 @@ export const es = {
         about: 'Sobre mí',
         projects: 'Proyectos',
         contact: 'Contacto',
+        sidebarTitle: 'Menú',
+        openMenu: 'Abrir menú',
+        closeMenu: 'Cerrar menú',
     },
     hero: {
         name: 'Brian Ramírez',
@@ -47,6 +50,48 @@ export const es = {
         closingMessage:
             'Estoy abierto a colaborar en proyectos interesantes, consultorías, o simplemente conversar sobre ideas. Escríbeme cuando quieras — suelo responder rápido.',
     },
+    contactForm: {
+        title: 'Ponte en contacto',
+
+        // Labels
+        name: 'Nombre',
+        email: 'Correo electrónico',
+        message: 'Tu mensaje',
+
+        // Placeholders
+        placeholders: {
+            name: 'Tu nombre completo',
+            email: 'tu@email.com',
+            message: 'Cuéntame sobre tu proyecto...',
+        },
+
+        // Botones
+        submit: 'Enviar mensaje',
+        sending: 'Enviando mensaje...',
+
+        // Errores
+        errors: {
+            name: {
+                required: 'El nombre es obligatorio.',
+                min: 'El nombre es demasiado corto.',
+            },
+            email: {
+                required: 'El correo electrónico es obligatorio.',
+                invalid: 'Ingresa un correo electrónico válido.',
+            },
+            message: {
+                required: 'Debes escribir un mensaje.',
+                min: 'El mensaje es demasiado corto.',
+            },
+        },
+
+        // Mensajes de estado
+        status: {
+            success: '¡Mensaje enviado con éxito! Te responderé pronto.',
+            error: 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.',
+        },
+    },
+
     footer: {
         copyright: '© 2025 Brian Ramírez',
         location: 'Las Palmas de Gran Canaria, ES',

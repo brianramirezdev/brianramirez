@@ -24,6 +24,8 @@ import {
     SiStripe,
     SiChartdotjs,
     SiPusher,
+    SiHostinger,
+    SiNetlify,
 } from '@icons-pack/react-simple-icons';
 
 const allLogos = [
@@ -45,6 +47,8 @@ const allLogos = [
     { node: <SiGit size={36} title="Git" /> },
     { node: <SiGithub size={36} title="GitHub" /> },
     { node: <SiGitlab size={36} title="GitLab" /> },
+    { node: <SiHostinger size={36} title="Hostinger" /> },
+    { node: <SiNetlify size={36} title="Netlify" /> },
 ];
 
 export default function HeroSection() {

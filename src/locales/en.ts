@@ -4,6 +4,9 @@ export const en = {
         about: 'About',
         projects: 'Projects',
         contact: 'Contact',
+        sidebarTitle: 'Menu',
+        openMenu: 'Open menu',
+        closeMenu: 'Close menu',
     },
     hero: {
         name: 'Brian Ramírez',
@@ -46,6 +49,48 @@ export const en = {
         phone: '+34 611 15 47 64',
         closingMessage: "I'm open to collaborating on interesting projects, consulting, or simply chatting about ideas. Reach out anytime — I usually reply quickly.",
     },
+    contactForm: {
+        title: 'Get in touch',
+
+        // Labels
+        name: 'Full name',
+        email: 'Email address',
+        message: 'Your message',
+
+        // Placeholders
+        placeholders: {
+            name: 'Your full name',
+            email: 'you@email.com',
+            message: 'Tell me about your project...',
+        },
+
+        // Buttons
+        submit: 'Send message',
+        sending: 'Sending message...',
+
+        // Errors
+        errors: {
+            name: {
+                required: 'Name is required.',
+                min: 'The name is too short.',
+            },
+            email: {
+                required: 'Email is required.',
+                invalid: 'Please enter a valid email address.',
+            },
+            message: {
+                required: 'A message is required.',
+                min: 'The message is too short.',
+            },
+        },
+
+        // Status messages
+        status: {
+            success: 'Message sent successfully! I will get back to you soon.',
+            error: 'There was an error sending your message. Please try again.',
+        },
+    },
+
     footer: {
         copyright: '© 2025 Brian Ramírez',
         location: 'Las Palmas de Gran Canaria, ES',

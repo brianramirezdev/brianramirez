@@ -10,6 +10,9 @@ export interface Translations {
         about: string;
         projects: string;
         contact: string;
+        sidebarTitle: string;
+        openMenu: string;
+        closeMenu: string;
     };
     hero: {
         name: string;
@@ -42,6 +45,41 @@ export interface Translations {
         phone: string;
         closingMessage: string;
     };
+    contactForm: {
+        title: string;
+        name: string;
+        email: string;
+        message: string;
+        submit: string;
+        sending: string;
+
+        placeholders: {
+            name: string;
+            email: string;
+            message: string;
+        };
+
+        errors: {
+            name: {
+                required: string;
+                min: string;
+            };
+            email: {
+                required: string;
+                invalid: string;
+            };
+            message: {
+                required: string;
+                min: string;
+            };
+        };
+
+        status: {
+            success: string;
+            error: string;
+        };
+    };
+
     footer: {
         copyright: string;
         location: string;

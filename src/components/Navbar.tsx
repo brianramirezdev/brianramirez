@@ -46,14 +46,14 @@ export default function Navbar() {
                 <div className="md:hidden">
                     <Sheet open={open} onOpenChange={setOpen}>
                         <SheetTrigger asChild>
-                            <Button variant="ghost" size="icon" className="relative" aria-label={open ? 'Cerrar menú' : 'Abrir menú'}>
+                            <Button variant="ghost" size="icon" className="relative" aria-label={open ? t.navbar.closeMenu : t.navbar.openMenu}>
                                 {open ? <X className="h-5 w-5 transition-transform rotate-90" /> : <Menu className="h-5 w-5" />}
                             </Button>
                         </SheetTrigger>
 
                         <SheetContent side="left" className="w-[280px] sm:w-[320px] p-0">
                             <SheetHeader className="px-6 pt-6 pb-4">
-                                <SheetTitle className="text-left text-xl">{t.navbar.projects || 'Menú'}</SheetTitle>
+                                <SheetTitle className="text-left text-xl">{t.navbar.sidebarTitle}</SheetTitle>
                             </SheetHeader>
 
                             <div className="flex flex-col px-4 pb-6">
