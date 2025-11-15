@@ -22,14 +22,14 @@ export function useGsapFloatReveal(ref: React.RefObject<HTMLElement | null>, sel
             gsap.to(targets, {
                 opacity: 1,
                 y: 0,
-                clipPath: 'inset(0 0% 0 0)', // revela completamente
+                clipPath: 'inset(0 0% 0 0)',
                 duration: 1.4,
                 ease: 'cubic-bezier(0.23, 1, 0.32, 1)', // tipo expo suave
                 stagger: 0.12,
                 scrollTrigger: {
                     trigger: targets,
                     start: 'top 80%',
-                    end: 'bottom 20%',
+                    end: 'bottom 45%',
                     scrub: true,
                     // markers: true,
                 },
