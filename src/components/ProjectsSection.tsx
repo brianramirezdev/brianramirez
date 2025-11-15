@@ -21,8 +21,8 @@ export default function projectsSection() {
     const projects = language === 'es' ? projectsEs : projectsEn;
 
     return (
-        <SectionLayout id="projects" ref={mainRef} className="bg-secondary/30 m-4 inset-0 rounded-md border border-foreground/10">
-            <div className="max-w-7xl mx-auto">
+        <SectionLayout id="projects" ref={mainRef} className="bg-secondary/30 m-4 inset-0 rounded-md border border-foreground/10 ">
+            <div className="max-w-7xl mx-auto py-24">
                 <div className="mb-20 space-y-6">
                     <h2
                         id="projects-heading"
