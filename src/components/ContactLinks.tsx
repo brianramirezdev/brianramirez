@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 const contactLinks: contactLink[] = [
     {
         name: 'GitHub',
-        url: 'https://github.com/brianrddev',
+        url: 'https://github.com/brianramirezdev',
         icon: <Github size={28} />,
     },
     {
