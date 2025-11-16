@@ -1,6 +1,6 @@
 import ContactLinks from './ContactLinks';
 import LogoLoop from './LogoLoop';
-import PixelBlast from './PixelBlast';
+// import PixelBlast from './PixelBlast';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useRef } from 'react';
 import { useHeroRevealAnimation } from '@/hooks/useHeroRevealAnimation';
