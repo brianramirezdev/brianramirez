@@ -199,7 +199,7 @@ export default async function handler(req: any, res: any) {
         const emailHtml = generateEmailHTML(name, email, message);
 
         const { error } = await resend.emails.send({
-            from: 'Portfolio Contact <contacto@mail.brianramirez.dev>',
+            from: 'Portfolio Contact <contact@mail.brianramirez.dev>',
             to: ['brianramirezdelgadodev@gmail.com'],
             replyTo: email,
             subject: `✨ Nuevo mensaje de ${name}`,
