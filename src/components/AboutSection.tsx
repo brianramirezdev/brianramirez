@@ -25,11 +25,7 @@ export default function AboutSection() {
                     {/* LEFT */}
                     <div className="space-y-10">
                         <header className="space-y-4">
-                            <h2
-                                id="about-heading"
-                                className="gsap-reveal text-5xl md:text-6xl font-bold tracking-tight
-                                           bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/60"
-                            >
+                            <h2 id="about-heading" className="gsap-reveal text-5xl md:text-6xl font-bold tracking-tight leading-tight">
                                 {t.about.title}
                             </h2>
 

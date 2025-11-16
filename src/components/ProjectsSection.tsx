@@ -26,7 +26,7 @@ export default function projectsSection() {
                 <div className="mb-16 space-y-6">
                     <h2
                         id="projects-heading"
-                        className=" gsap-reveal text-6xl md:text-7xl font-bold tracking-tight leading-tight
+                        className="gsap-reveal text-5xl md:text-7xl font-bold tracking-tight leading-tight
         "
                     >
                         {t.projects.featuredTitle}

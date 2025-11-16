@@ -24,18 +24,27 @@ export function ThemeProvider({ children, defaultTheme = 'system', storageKey = 
     const [theme, setTheme] = useState<Theme>(() => (localStorage.getItem(storageKey) as Theme) || defaultTheme);
 
     useEffect(() => {
-        const root = window.document.documentElement;
+        const root = document.documentElement;
 
         root.classList.remove('light', 'dark');
 
-        if (theme === 'system') {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-            root.classList.add(systemTheme);
-            return;
+        const applied = theme === 'system' ? systemTheme : theme;
+
+        root.classList.add(applied);
+
+        // === FIX BRAVE / CHROME ANDROID ===
+        const metaLight = document.getElementById('meta-light');
+        const metaDark = document.getElementById('meta-dark');
+
+        if (applied === 'light') {
+            metaLight?.setAttribute('media', 'all');
+            metaDark?.setAttribute('media', 'not all');
+        } else {
+            metaLight?.setAttribute('media', 'not all');
+            metaDark?.setAttribute('media', 'all');
         }
-
-        root.classList.add(theme);
     }, [theme]);
 
     const value = {

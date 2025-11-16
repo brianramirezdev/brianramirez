@@ -65,7 +65,7 @@ export default function HeroSection() {
     });
 
     return (
-        <section id="hero" ref={heroRef} className="relative h-dvh w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">
+        <section id="hero" ref={heroRef} className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">
             {/* Background */}
             <div className="absolute inset-0 hero-background pointer-events-none z-0">
                 {/* <PixelBlast
@@ -81,9 +81,6 @@ export default function HeroSection() {
                     transparent
                 /> */}
             </div>
-
-            {/* Soft vignette for clarity */}
-            <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-background/10 to-background/40 z-1" />
 
             {/* CONTENT */}
             <div

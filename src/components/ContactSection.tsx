@@ -20,7 +20,7 @@ export default function ContactSection() {
                 {/* Left column (text content) */}
                 <div className="w-full max-w-3xl space-y-10">
                     <div className="space-y-3 gsap-reveal">
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+                        <h2 className="gsap-reveal text-5xl md:text-6xl font-bold tracking-tight leading-tight">
                             {t.contact.title} <span className="block md:inline text-killua">{t.contact.together}</span>
                         </h2>
 
