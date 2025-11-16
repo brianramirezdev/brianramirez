@@ -1,14 +1,11 @@
 import { useLayoutEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
-export function useGsapScrollReveal(ref: React.RefObject<HTMLElement | null>, cardSelector = '.gsap-card') {
+export function useGsapScrollReveal(gsap: any, ref: React.RefObject<HTMLElement | null>, selector = '.gsap-card') {
     useLayoutEffect(() => {
-        if (!ref.current) return;
+        if (!gsap || !ref.current) return;
+
         const ctx = gsap.context(() => {
-            gsap.utils.toArray<HTMLElement>(cardSelector).forEach((card) => {
+            gsap.utils.toArray(selector).forEach((card: HTMLElement) => {
                 gsap.fromTo(
                     card,
                     { y: 80, opacity: 0, scale: 0.9 },
@@ -22,7 +19,6 @@ export function useGsapScrollReveal(ref: React.RefObject<HTMLElement | null>, ca
                             start: 'top 95%',
                             end: 'top 45%',
                             scrub: true,
-                            // markers: true,
                         },
                     }
                 );
@@ -30,5 +26,5 @@ export function useGsapScrollReveal(ref: React.RefObject<HTMLElement | null>, ca
         }, ref);
 
         return () => ctx.revert();
-    }, [ref, cardSelector]);
+    }, [gsap, ref, selector]);
 }

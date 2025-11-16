@@ -9,13 +9,15 @@ import { projects as projectsEs } from '@/data/projects.es';
 import { projects as projectsEn } from '@/data/projects.en';
 import SectionLayout from '@/layouts/SectionLayout';
 import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
+import { useGsap } from '@/hooks/useGsap';
 
 export default function projectsSection() {
-    const mainRef = useRef<HTMLElement>(null);
     const { language, t } = useLanguage();
 
-    useGsapScrollReveal(mainRef);
-    useGsapFloatReveal(mainRef);
+    const mainRef = useRef<HTMLElement>(null);
+    const gsap = useGsap();
+    useGsapScrollReveal(gsap, mainRef);
+    useGsapFloatReveal(gsap, mainRef);
 
     // Seleccionar los proyectos según el idioma actual
     const projects = language === 'es' ? projectsEs : projectsEn;

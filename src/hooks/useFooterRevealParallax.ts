@@ -1,28 +1,14 @@
 import { useLayoutEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
-interface Options {
-    backgroundSelector?: string;
-}
-
-export function useFooterRevealParallax(ref: React.RefObject<HTMLElement | null>, opts: Options = {}) {
+export function useFooterRevealParallax(gsap: any, ref: React.RefObject<HTMLElement | null>, opts: { backgroundSelector?: string } = {}) {
     useLayoutEffect(() => {
-        if (!ref.current) return;
+        if (!gsap || !ref.current) return;
 
         const footerEl = ref.current;
         const innerEl = footerEl.querySelector('.footer-inner');
         const bgEl = opts.backgroundSelector ? footerEl.querySelector(opts.backgroundSelector) : null;
 
-        if (!innerEl) {
-            console.warn('useFooterRevealParallax: Missing .footer-inner inside footer.');
-            return;
-        }
-
         const ctx = gsap.context(() => {
-            // --- REVEAL INICIAL ---
             gsap.fromTo(
                 innerEl,
                 { y: 60, opacity: 0 },
@@ -34,15 +20,12 @@ export function useFooterRevealParallax(ref: React.RefObject<HTMLElement | null>
                     scrollTrigger: {
                         trigger: footerEl,
                         start: 'top 90%',
-                        toggleActions: 'play none none none',
                     },
                 }
             );
 
-            // --- PARALLAX DEL CONTENIDO ---
             gsap.to(innerEl, {
                 y: -10,
-                ease: 'none',
                 scrollTrigger: {
                     trigger: footerEl,
                     start: 'top bottom',
@@ -51,11 +34,9 @@ export function useFooterRevealParallax(ref: React.RefObject<HTMLElement | null>
                 },
             });
 
-            // --- PARALLAX DEL FONDO ---
             if (bgEl) {
                 gsap.to(bgEl, {
                     y: -15,
-                    ease: 'none',
                     scrollTrigger: {
                         trigger: footerEl,
                         start: 'top bottom',
@@ -67,5 +48,5 @@ export function useFooterRevealParallax(ref: React.RefObject<HTMLElement | null>
         }, ref);
 
         return () => ctx.revert();
-    }, [ref, opts]);
+    }, [gsap, ref, opts]);
 }

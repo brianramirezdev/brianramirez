@@ -8,15 +8,15 @@ import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
 
 import { skills as skillsEs } from '@/data/skills.es';
 import { skills as skillsEn } from '@/data/skills.en';
+import { useGsap } from '@/hooks/useGsap';
 
 export default function AboutSection() {
     const { language, t } = useLanguage();
     const skills = language === 'es' ? skillsEs : skillsEn;
 
     const aboutRef = useRef<HTMLElement>(null);
-
-    // Nuevo hook con animación artística premium
-    useGsapFloatReveal(aboutRef, '.gsap-reveal');
+    const gsap = useGsap();
+    useGsapFloatReveal(gsap, aboutRef);
 
     return (
         <SectionLayout id="about">

@@ -1,22 +1,16 @@
-// src/hooks/useGsapFloatReveal.ts
 import { useLayoutEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
-export function useGsapFloatReveal(ref: React.RefObject<HTMLElement | null>, selector = '.gsap-reveal') {
+export function useGsapFloatReveal(gsap: any, ref: React.RefObject<HTMLElement | null>, selector = '.gsap-reveal') {
     useLayoutEffect(() => {
-        if (!ref.current) return;
+        if (!gsap || !ref.current) return;
 
         const ctx = gsap.context(() => {
-            const targets = gsap.utils.toArray<HTMLElement>(selector);
+            const targets = gsap.utils.toArray(selector);
 
-            // Animación revelado artístico + float
             gsap.set(targets, {
                 opacity: 0,
                 y: 15,
-                clipPath: 'inset(0 100% 0 0)', // oculto desde la derecha
+                clipPath: 'inset(0 100% 0 0)',
             });
 
             gsap.to(targets, {
@@ -24,18 +18,17 @@ export function useGsapFloatReveal(ref: React.RefObject<HTMLElement | null>, sel
                 y: 0,
                 clipPath: 'inset(0 0% 0 0)',
                 duration: 1.4,
-                ease: 'cubic-bezier(0.23, 1, 0.32, 1)', // tipo expo suave
                 stagger: 0.12,
+                ease: 'cubic-bezier(0.23, 1, 0.32, 1)',
                 scrollTrigger: {
                     trigger: targets,
                     start: 'top 80%',
                     end: 'bottom 45%',
                     scrub: true,
-                    // markers: true,
                 },
             });
         }, ref);
 
         return () => ctx.revert();
-    }, [ref, selector]);
+    }, [gsap, ref, selector]);
 }

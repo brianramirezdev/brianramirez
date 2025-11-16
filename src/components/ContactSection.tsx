@@ -6,13 +6,16 @@ import { useRef } from 'react';
 import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
 import ContactForm from '@/components/ContactForm';
 import { useGsapScrollReveal } from '@/hooks/useGsapScrollReveal';
+import { useGsap } from '@/hooks/useGsap';
 
 export default function ContactSection() {
     const { t } = useLanguage();
+
     const contactRef = useRef<HTMLElement>(null);
 
-    useGsapFloatReveal(contactRef, '.gsap-reveal');
-    useGsapScrollReveal(contactRef, '.gsap-card');
+    const gsap = useGsap();
+    useGsapFloatReveal(gsap, contactRef);
+    useGsapScrollReveal(gsap, contactRef);
 
     return (
         <SectionLayout id="contact" ref={contactRef}>

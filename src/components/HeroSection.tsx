@@ -28,6 +28,7 @@ import {
     SiNetlify,
     SiVercel,
 } from '@icons-pack/react-simple-icons';
+import { useGsap } from '@/hooks/useGsap';
 
 const allLogos = [
     { node: <SiHtml5 size={36} title="HTML5" /> },
@@ -57,12 +58,8 @@ export default function HeroSection() {
     const { t } = useLanguage();
     const heroRef = useRef<HTMLElement>(null);
 
-    useHeroRevealAnimation(heroRef, {
-        titleSelector: '.hero-title',
-        subtitleSelector: '.hero-subtitle',
-        logosSelector: '.hero-logos > *',
-        backgroundSelector: '.hero-background',
-    });
+    const gsap = useGsap();
+    useHeroRevealAnimation(gsap, heroRef);
 
     return (
         <section id="hero" ref={heroRef} className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">

@@ -2,12 +2,14 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import ContactLinks from './ContactLinks';
 import { useRef } from 'react';
 import { useFooterRevealParallax } from '@/hooks/useFooterRevealParallax';
+import { useGsap } from '@/hooks/useGsap';
 
 export default function Footer() {
     const { t } = useLanguage();
     const footerRef = useRef<HTMLElement>(null);
+    const gsap = useGsap();
 
-    useFooterRevealParallax(footerRef, {
+    useFooterRevealParallax(gsap, footerRef, {
         backgroundSelector: '.footer-bg',
     });
 
