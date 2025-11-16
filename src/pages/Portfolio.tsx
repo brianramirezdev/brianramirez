@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
-const Navbar = lazy(() => import('@/components/Navbar'));
-const HeroSection = lazy(() => import('@/components/HeroSection'));
+import HeroSection from '@/components/HeroSection';
+import Navbar from '@/components/Navbar';
 const AboutSection = lazy(() => import('@/components/AboutSection'));
 const ProjectsSection = lazy(() => import('@/components/ProjectsSection'));
 const ContactSection = lazy(() => import('@/components/ContactSection'));
@@ -9,12 +9,8 @@ const Footer = lazy(() => import('@/components/Footer'));
 const Portfolio = () => {
     return (
         <>
-            <Suspense fallback={null}>
-                <Navbar />
-            </Suspense>
-            <Suspense fallback={null}>
-                <HeroSection />
-            </Suspense>
+            <Navbar />
+            <HeroSection />
             <Suspense fallback={null}>
                 <AboutSection />
             </Suspense>
