@@ -1,73 +1,96 @@
-# React + TypeScript + Vite
+<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/818e62b5-60ea-449a-8483-b8b26660056b" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 🌐 Portfolio — Brian Ramírez
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+¡Bienvenido a mi portfolio personal! Aquí presento mis habilidades, experiencia y proyectos como **Desarrollador Full Stack** especializado en **aplicaciones web, IA y Big Data**. El sitio está diseñado con un enfoque minimalista, animaciones fluidas y tecnologías modernas para ofrecer una experiencia elegante, rápida y profesional.
 
-## React Compiler
+---
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 👉 Visitar
 
-## Expanding the ESLint configuration
+* **Portfolio:** [https://brianramirez.dev](https://brianramirez.dev)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tecnologías Principales
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Next.js 14** (App Router, Server Components, Server Actions)
+* **React 18**
+* **TypeScript**
+* **Tailwind CSS 4**
+* **shadcn/ui**
+* **GSAP** (animaciones avanzadas)
+* **Lenis** (smooth scrolling)
+* **Three.js** (elementos 3D interactivos)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### UI & Iconos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Lucide Icons
+* React Simple Icons
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Formularios & Validación
+
+* React Hook Form
+* Zod
+
+### Emails
+
+* **Resend** (envío de correos desde Server Actions)
+
+### Herramientas de Desarrollo
+
+* Vite (entorno ligero de pruebas)
+* Bun (gestor de paquetes)
+
+### Hosting
+
+* **Vercel** (edge runtime, ISR, build optimizada)
+
+---
+
+## 🎨 Características del Portfolio
+
+* Diseño limpio, moderno y totalmente **responsivo**.
+* Modo **claro y oscuro**.
+* Contenido disponible en **ES / EN**.
+* Descarga de **CV** directamente desde el portfolio.
+* Animaciones fluidas con **GSAP**.
+* Navegación suave con **Lenis**.
+* Detalles visuales con **Three.js**.
+* Formulario de contacto funcional con **validación tipada**.
+* Proyectos destacados con tecnología utilizada.
+* Alto **rendimiento** y tiempos de carga óptimos.
+
+---
+
+## 📬 Formulario de Contacto
+
+El formulario utiliza **React Hook Form** y **Zod** para validación estricta del esquema, mientras que las **Server Actions** permiten procesar la información de forma segura. Los mensajes son enviados mediante **Resend** sin necesidad de API routes adicionales.
+
+---
+
+## 🧩 Arquitectura General
+
+Estructura basada en **Next.js 14** con componentes organizados por secciones, UI generada con **shadcn/ui**, hooks personalizados, animaciones desacopladas, utilidades internas y archivos de estilo optimizados con **Tailwind CSS 4**.
+
+Incluye integración con **Three.js**, iconografía modular y contenido dinámico con **soporte multilenguaje**.
+
+---
+
+## ☁️ Deploy
+
+El proyecto está desplegado en **Vercel** con:
+
+* Compilación y optimización automática.
+* Renderizado en *edge*.
+* Revalidación incremental (ISR).
+* Integración directa con **GitHub** para *deploy* continuo.
+
+---
+
+## 📄 Licencia
+
+Proyecto personal desarrollado como portfolio profesional.
