@@ -158,7 +158,7 @@
 ================================= */
 @layer base {
     * {
-        @apply border-border outline-ring/50;
+        @apply border-border outline-ring/50 selection:bg-killua selection:text-primary-foreground;
         font-family: 'Inter', sans-serif;
         font-family: 'Space Grotesk', sans-serif;
         font-optical-sizing: auto;
