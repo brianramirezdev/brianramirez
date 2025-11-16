@@ -30,12 +30,12 @@ export default function ContactSection() {
                     <p className="gsap-reveal text-lg md:text-xl text-muted-foreground leading-relaxed">{t.contact.description}</p>
 
                     <div className="pt-6 space-y-8 border-l-2 pl-6 border-foreground/10 gsap-reveal">
-                        <a href="mailto:brianrd.dev@gmail.com" className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all group">
+                        <a href={`mailto:${t.contact.email}`} className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all group">
                             <Mail className="w-6 h-6 group-hover:scale-110 transition-transform" />
                             {t.contact.email}
                         </a>
 
-                        <a href="tel:+34611154764" className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all group">
+                        <a href={`tel:${t.contact.phone}`} className="flex items-center gap-4 text-xl md:text-2xl font-medium hover:text-killua transition-all group">
                             <Phone className="w-6 h-6 group-hover:scale-110 transition-transform" />
                             {t.contact.phone}
                         </a>
