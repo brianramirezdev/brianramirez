@@ -1,23 +1,32 @@
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
-import ProjectsSection from '@/components/ProjectsSection';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+import { lazy, Suspense } from 'react';
+const Navbar = lazy(() => import('@/components/Navbar'));
+const HeroSection = lazy(() => import('@/components/HeroSection'));
+const AboutSection = lazy(() => import('@/components/AboutSection'));
+const ProjectsSection = lazy(() => import('@/components/ProjectsSection'));
+const ContactSection = lazy(() => import('@/components/ContactSection'));
+const Footer = lazy(() => import('@/components/Footer'));
 
 const Portfolio = () => {
     return (
         <>
-            <Navbar />
-            <HeroSection />
-            <AboutSection />
-            <ProjectsSection />
-            <ContactSection />
-            <Footer />
+            <Suspense fallback={null}>
+                <Navbar />
+            </Suspense>
+            <Suspense fallback={null}>
+                <HeroSection />
+            </Suspense>
+            <Suspense fallback={null}>
+                <AboutSection />
+            </Suspense>
+            <Suspense fallback={null}>
+                <ProjectsSection />
+            </Suspense>
+            <Suspense fallback={null}>
+                <ContactSection />
+            </Suspense>
+            <Suspense fallback={null}>
+                <Footer />
+            </Suspense>
         </>
     );
 };
