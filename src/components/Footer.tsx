@@ -18,26 +18,22 @@ export default function Footer() {
         >
             <div className="footer-inner relative max-w-7xl mx-auto flex flex-col gap-20">
                 {/* CTA */}
-                <div className="flex flex-col items-center text-center gap-6">
-                    <h2
-                        className="text-4xl md:text-6xl font-bold tracking-tight leading-tight
-                        bg-linear-to-b from-foreground to-foreground/60 bg-clip-text text-transparent"
-                    >
-                        {t.footer.ctaTitle}
-                    </h2>
+                {/* CTA ligera / mini-branding */}
+                <div className="flex flex-col items-center text-center gap-4">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">{t.footer.ctaMiniTitle}</h2>
 
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">{t.footer.ctaDescription}</p>
+                    <p className="text-base md:text-lg text-muted-foreground max-w-xl">{t.footer.ctaMiniSubtitle}</p>
 
-                    <div className="pt-4">
+                    <div className="pt-2">
                         <ContactLinks />
                     </div>
                 </div>
 
                 {/* Columns */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-muted-foreground">
+                <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-12 place-items-stretch text-muted-foreground">
                     {/* ABOUT */}
                     <div className="space-y-3">
-                        <h3 className="text-sm  font-semibold tracking-wide text-killua">{t.footer.colAboutTitle}</h3>
+                        <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colAboutTitle}</h3>
                         <p>{t.footer.colAboutText}</p>
                     </div>
 
@@ -47,26 +43,22 @@ export default function Footer() {
                         <p>{t.footer.location}</p>
                     </div>
 
-                    {/* CONTACT */}
+                    {/* LINKS (no contacto directo) */}
                     <div className="space-y-3">
-                        <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colContactTitle}</h3>
+                        <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colLinksTitle}</h3>
 
-                        <a href="mailto:brianrd.dev@gmail.com" className="hover:text-killua transition-colors block">
-                            {t.contact.email}
+                        <a href="/#about" className="hover:text-killua transition-colors block">
+                            {t.footer.linkAbout}
                         </a>
 
-                        <a href="tel:+34611154764" className="hover:text-killua transition-colors block">
-                            {t.contact.phone}
+                        <a href="/#projects" className="hover:text-killua transition-colors block">
+                            {t.footer.linkProjects}
+                        </a>
+
+                        <a href="/#contact" className="hover:text-killua transition-colors block">
+                            {t.footer.linkContact}
                         </a>
                     </div>
-                </div>
-
-                {/* Bottom bar */}
-                <div className="border-t border-foreground/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground gap-2">
-                    <p>
-                        {t.footer.copyright} — {t.footer.rights}
-                    </p>
-                    <p className="opacity-80">{t.footer.crafted}</p>
                 </div>
             </div>
         </footer>

@@ -94,22 +94,29 @@ export const es = {
 
     footer: {
         copyright: '© 2025 Brian Ramírez',
-        location: 'Las Palmas de Gran Canaria, ES',
+        location: 'Lanzarote, España',
 
-        ctaTitle: 'Construyamos algo grande.',
-        ctaDescription: 'Ya sea un producto, una idea o un desafío, me encantaría ayudarte a convertirlo en algo significativo.',
+        // CTA ligera
+        ctaMiniTitle: 'Gracias por visitar mi portfolio.',
+        ctaMiniSubtitle: 'Siempre abierto a nuevas oportunidades, retos y colaboraciones.',
 
-        colAboutTitle: 'SOBRE MÍ',
-        colAboutText: 'Desarrollador frontend apasionado por crear experiencias digitales pulidas y de alto rendimiento.',
+        // Columnas
+        colAboutTitle: 'SOBRE ESTE SITIO',
+        colAboutText: 'Portfolio creado con tecnologías modernas, enfocado en rendimiento, accesibilidad y una experiencia visual limpia.',
 
         colLocationTitle: 'UBICACIÓN',
         colWorld: 'Disponible globalmente.',
 
-        colContactTitle: 'CONTACTO',
+        colLinksTitle: 'NAVEGACIÓN',
+        linkAbout: 'Sobre mí',
+        linkProjects: 'Proyectos',
+        linkContact: 'Contacto',
 
+        // Bottom bar (si lo usas en tu barrita inferior)
         rights: 'Todos los derechos reservados.',
-        crafted: 'Creado con pasión, paciencia y píxeles.',
+        crafted: 'Diseñado y desarrollado por mí mismo.',
     },
+
     downloadCV: {
         label: 'Descargar CV',
     },

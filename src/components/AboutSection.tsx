@@ -20,7 +20,7 @@ export default function AboutSection() {
 
     return (
         <SectionLayout id="about">
-            <section ref={aboutRef} className="relative w-full px-6 py-28 max-w-7xl mx-auto" aria-labelledby="about-heading">
+            <section ref={aboutRef} className="relative w-full px-6 md:pt-30 md:pb-20 lg:pb-30 max-w-7xl mx-auto" aria-labelledby="about-heading">
                 <div className="grid md:grid-cols-2 gap-20">
                     {/* LEFT */}
                     <div className="space-y-10">
@@ -46,12 +46,12 @@ export default function AboutSection() {
 
                         {/* Education */}
                         <div className="space-y-6 pt-4">
-                            <h3 className="gsap-reveal text-2xl font-semibold tracking-wide text-killua">{t.about.education}</h3>
+                            <h3 className="gsap-reveal text-4xl font-semibold tracking-wide">{t.about.education}</h3>
 
                             <div className="grid gap-5">
                                 {t.about.educationList.map((edu: any, i: number) => (
                                     <div key={i} className="gsap-reveal">
-                                        <p className="text-lg font-medium text-foreground">{edu.degree}</p>
+                                        <p className="text-lg font-medium text-killua">{edu.degree}</p>
                                         <p className="text-sm text-muted-foreground">{edu.institution}</p>
                                     </div>
                                 ))}
@@ -61,12 +61,7 @@ export default function AboutSection() {
 
                     {/* RIGHT - SKILLS */}
                     <div className="space-y-12">
-                        <h3
-                            className="gsap-reveal text-4xl font-bold tracking-tight mb-6
-                                       bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/60"
-                        >
-                            {t.about.skillsTitle}
-                        </h3>
+                        <h3 className="gsap-reveal text-4xl font-semibold tracking-tight mb-6">{t.about.skillsTitle}</h3>
 
                         <div className="space-y-10">
                             {skills.map((section) => (
@@ -78,9 +73,7 @@ export default function AboutSection() {
                                             <Badge
                                                 key={skill}
                                                 variant="secondary"
-                                                className="rounded-sm px-3 py-1 text-xs font-medium
-                                                           bg-background/60 border border-border/40
-                                                           hover:bg-killua/10 hover:text-killua transition-colors"
+                                                className="cursor-default rounded-sm px-3 py-1 text-xs font-medium bg-background/60 border border-border/40 hover:bg-killua/10 hover:text-killua transition-colors"
                                             >
                                                 {skill}
                                             </Badge>

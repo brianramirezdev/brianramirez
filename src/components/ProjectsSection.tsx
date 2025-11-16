@@ -22,16 +22,11 @@ export default function projectsSection() {
 
     return (
         <SectionLayout id="projects" ref={mainRef} className="bg-secondary/30 m-4 inset-0 rounded-md border border-foreground/10 ">
-            <div className="max-w-7xl mx-auto py-24">
-                <div className="mb-20 space-y-6">
+            <div className="max-w-7xl mx-auto md:pt-30 md:pb-20 lg:pb-30">
+                <div className="mb-16 space-y-6">
                     <h2
                         id="projects-heading"
-                        className="
-            gsap-reveal
-            text-6xl md:text-7xl font-extrabold tracking-tight
-            bg-clip-text text-transparent
-            bg-linear-to-r from-foreground via-foreground/90 to-foreground/60
-            leading-[1.1]
+                        className=" gsap-reveal text-6xl md:text-7xl font-bold tracking-tight leading-tight
         "
                     >
                         {t.projects.featuredTitle}

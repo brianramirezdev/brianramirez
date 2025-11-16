@@ -84,20 +84,27 @@ export interface Translations {
         copyright: string;
         location: string;
 
-        ctaTitle: string;
-        ctaDescription: string;
+        // New CTA (short)
+        ctaMiniTitle: string;
+        ctaMiniSubtitle: string;
 
+        // Columns
         colAboutTitle: string;
         colAboutText: string;
 
         colLocationTitle: string;
         colWorld: string;
 
-        colContactTitle: string;
+        colLinksTitle: string;
+        linkAbout: string;
+        linkProjects: string;
+        linkContact: string;
 
+        // Bottom bar (optional)
         rights: string;
         crafted: string;
     };
+
     downloadCV: {
         label: string;
     };

@@ -65,18 +65,10 @@ export default function HeroSection() {
     });
 
     return (
-        <section
-            id="hero"
-            ref={heroRef}
-            className="
-        relative h-dvh w-full overflow-hidden
-        flex flex-col items-center justify-center
-        px-6 text-foreground
-    "
-        >
+        <section id="hero" ref={heroRef} className="relative h-dvh w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">
             {/* Background */}
             <div className="absolute inset-0 hero-background pointer-events-none z-0">
-                <PixelBlast
+                {/* <PixelBlast
                     variant="square"
                     pixelSize={2}
                     patternScale={3}
@@ -87,7 +79,7 @@ export default function HeroSection() {
                     noiseAmount={0}
                     edgeFade={0.55}
                     transparent
-                />
+                /> */}
             </div>
 
             {/* Soft vignette for clarity */}
@@ -106,11 +98,9 @@ export default function HeroSection() {
                 <h1
                     className="
                 hero-title
-                font-bold leading-[0.95]
+                font-semibold leading-[0.95]
                 text-6xl md:text-8xl lg:text-[10rem]
                 tracking-[-0.02em]
-                bg-clip-text text-transparent
-                bg-linear-to-b from-foreground to-foreground/70
                 drop-shadow-sm
             "
                 >
@@ -127,14 +117,7 @@ export default function HeroSection() {
             </div>
 
             {/* LOGO LOOP */}
-            <div
-                className="
-            hero-logos
-            absolute bottom-12 left-1/2 -translate-x-1/2
-            w-full max-w-7xl
-            z-10 opacity-95
-        "
-            >
+            <div className="hero-logos absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-7xl z-10 opacity-95 ">
                 <LogoLoop logos={allLogos} speed={30} gap={40} scaleOnHover pauseOnHover />
             </div>
         </section>

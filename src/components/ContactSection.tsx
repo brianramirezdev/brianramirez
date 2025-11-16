@@ -16,7 +16,7 @@ export default function ContactSection() {
 
     return (
         <SectionLayout id="contact" ref={contactRef}>
-            <div className="max-w-7xl w-full mx-auto py-30 flex flex-col lg:flex-row gap-12 lg:gap-20">
+            <div className="max-w-7xl w-full mx-auto md:pt-30 md:pb-20 lg:pb-30 flex flex-col lg:flex-row gap-12 lg:gap-20">
                 {/* Left column (text content) */}
                 <div className="w-full max-w-3xl space-y-10">
                     <div className="space-y-3 gsap-reveal">
