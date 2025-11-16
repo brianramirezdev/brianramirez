@@ -16,9 +16,6 @@ export default function Footer() {
             ref={footerRef}
             className={`footer-root flex relative justify-center items-center bg-background/30 backdrop-blur-xl border-t border-foreground/10 px-6 pt-20 pb-6 overflow-hidden sm:h-[calc(100dvh-97px)]`}
         >
-            {/* Artistic soft background */}
-            <div className="footer-bg absolute inset-0 pointer-events-none bg-linear-to-b from-transparent via-foreground/5 to-transparent opacity-20" />
-
             <div className="footer-inner relative max-w-7xl mx-auto flex flex-col gap-20">
                 {/* CTA */}
                 <div className="flex flex-col items-center text-center gap-6">
@@ -48,7 +45,6 @@ export default function Footer() {
                     <div className="space-y-3">
                         <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colLocationTitle}</h3>
                         <p>{t.footer.location}</p>
-                        {/* <p className="opacity-60">{t.footer.colWorld}</p> */}
                     </div>
 
                     {/* CONTACT */}
@@ -56,11 +52,11 @@ export default function Footer() {
                         <h3 className="text-sm font-semibold tracking-wide text-killua">{t.footer.colContactTitle}</h3>
 
                         <a href="mailto:brianrd.dev@gmail.com" className="hover:text-killua transition-colors block">
-                            brianrd.dev@gmail.com
+                            {t.contact.email}
                         </a>
 
                         <a href="tel:+34611154764" className="hover:text-killua transition-colors block">
-                            +34 611 154 764
+                            {t.contact.phone}
                         </a>
                     </div>
                 </div>

@@ -45,7 +45,7 @@ export const es = {
         together: 'Juntos',
         tagline: 'Construyamos algo que realmente importe — desde ideas pequeñas hasta productos completos.',
         description: 'Actualmente disponible para trabajos freelance y oportunidades a tiempo completo. No dudes en contactarme si te gustaría colaborar.',
-        email: 'brianrd.dev@gmail.com',
+        email: 'contact@brianramirez.dev',
         phone: '+34 611 15 47 64',
         closingMessage:
             'Estoy abierto a colaborar en proyectos interesantes, consultorías, o simplemente conversar sobre ideas. Escríbeme cuando quieras — suelo responder rápido.',

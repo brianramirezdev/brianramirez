@@ -45,7 +45,7 @@ export const en = {
         together: 'Together',
         tagline: "Let's build something that truly matters — from small ideas to complete products.",
         description: 'Currently available for freelance jobs and full-time opportunities. Feel free to contact me if you’d like to collaborate.',
-        email: 'brianrd.dev@gmail.com',
+        email: 'contact@brianramirez.dev',
         phone: '+34 611 15 47 64',
         closingMessage: "I'm open to collaborating on interesting projects, consulting, or simply chatting about ideas. Reach out anytime — I usually reply quickly.",
     },
@@ -60,7 +60,7 @@ export const en = {
         // Placeholders
         placeholders: {
             name: 'Your full name',
-            email: 'you@email.com',
+            email: 'your@email.com',
             message: 'Tell me about your project...',
         },
 
