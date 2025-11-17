@@ -34,16 +34,15 @@ export function ThemeProvider({ children, defaultTheme = 'system', storageKey = 
 
         root.classList.add(applied);
 
-        // === FIX BRAVE / CHROME ANDROID ===
-        const metaLight = document.getElementById('meta-light');
-        const metaDark = document.getElementById('meta-dark');
+        // === UPDATE META THEME-COLOR ===
+        const metaTheme = document.getElementById('theme-color-meta');
 
-        if (applied === 'light') {
-            metaLight?.setAttribute('media', 'all');
-            metaDark?.setAttribute('media', 'not all');
-        } else {
-            metaLight?.setAttribute('media', 'not all');
-            metaDark?.setAttribute('media', 'all');
+        if (metaTheme) {
+            if (applied === 'light') {
+                metaTheme.setAttribute('content', 'oklch(0.4881 0.2889 269.11)');
+            } else {
+                metaTheme.setAttribute('content', 'oklch(0.8006 0.095 268.35)');
+            }
         }
     }, [theme]);
 
