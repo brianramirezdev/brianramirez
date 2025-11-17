@@ -106,6 +106,7 @@
     --sidebar-ring: oklch(0.708 0 0);
     /* --killua: oklch(0.4835 0.2917 266.08); */
     --killua: oklch(0.4881 0.2889 269.11);
+    --pixelblast: #3a57a8;
 }
 
 /* ===============================
@@ -144,6 +145,7 @@
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
     --killua: oklch(0.8006 0.095 268.35);
+    --pixelblast: #8bb2ff;
 }
 
 /* ===============================

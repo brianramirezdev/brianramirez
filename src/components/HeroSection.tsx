@@ -1,8 +1,9 @@
-import ContactLinks from './ContactLinks';
-import LogoLoop from './LogoLoop';
-// import PixelBlast from './PixelBlast';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { useRef } from 'react';
+import ContactLinks from '@/components/ContactLinks';
+import LogoLoop from '@/components/LogoLoop';
+import PixelBlast from '@/components/PixelBlast';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { useGsap } from '@/hooks/useGsap';
 import { useHeroRevealAnimation } from '@/hooks/useHeroRevealAnimation';
 
 import {
@@ -28,7 +29,6 @@ import {
     SiNetlify,
     SiVercel,
 } from '@icons-pack/react-simple-icons';
-import { useGsap } from '@/hooks/useGsap';
 
 const allLogos = [
     { node: <SiHtml5 size={36} title="HTML5" /> },
@@ -65,18 +65,19 @@ export default function HeroSection() {
         <section id="hero" ref={heroRef} className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">
             {/* Background */}
             <div className="absolute inset-0 hero-background pointer-events-none z-0">
-                {/* <PixelBlast
-                    variant="square"
-                    pixelSize={2}
-                    patternScale={3}
-                    patternDensity={1}
+                <PixelBlast
+                    variant="circle"
+                    pixelSize={3.5}
+                    patternScale={3.1}
+                    patternDensity={1.25}
+                    pixelSizeJitter={0.5}
+                    noiseAmount={0.1}
+                    edgeFade={0.55}
                     liquid={false}
                     enableRipples={false}
-                    pixelSizeJitter={1}
-                    noiseAmount={0}
-                    edgeFade={0.55}
                     transparent
-                /> */}
+                    color="var(--pixelblast)"
+                />
             </div>
 
             {/* CONTENT */}

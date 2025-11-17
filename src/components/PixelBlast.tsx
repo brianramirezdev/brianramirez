@@ -29,6 +29,17 @@ type PixelBlastProps = {
     noiseAmount?: number;
 };
 
+function resolveCssColor(value: string): string {
+    if (!value.startsWith('var(')) return value;
+
+    if (typeof window === 'undefined') return value;
+
+    const varName = value.slice(4, -1).trim();
+    const cssValue = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+
+    return cssValue || value;
+}
+
 const createTouchTexture = () => {
     const size = 64;
     const canvas = document.createElement('canvas');
@@ -318,8 +329,26 @@ void main(){
     M *= fade;
   }
 
+// Color base
   vec3 color = uColor;
-  fragColor = vec4(color, M);
+
+  // ===========================
+  // MÁSCARA PARA NO PISAR EL HERO
+  // ===========================
+  // Coordenadas normalizadas [0,1]
+  vec2 norm = gl_FragCoord.xy / uResolution;
+
+  // Distancia vertical al centro (donde está el texto)
+  float distFromCenterY = abs(norm.y - 0.5);
+
+  // 0 cerca del centro, 1 hacia arriba/abajo
+  // 0.18 controla el grosor de la franja "limpia" del hero
+  float centerBand = smoothstep(0.0, 0.18, distFromCenterY);
+
+  // Alpha final: apagamos bastante en el centro
+  float alpha = M * centerBand;
+
+  fragColor = vec4(color, alpha);
 }
 `;
 
@@ -328,7 +357,7 @@ const MAX_CLICKS = 10;
 const PixelBlast: React.FC<PixelBlastProps> = ({
     variant = 'square',
     pixelSize = 2,
-    color = '#80a8ff',
+    color = '#a7baff',
     className,
     style,
     antialias = true,
@@ -426,10 +455,13 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
             container.appendChild(renderer.domElement);
             if (transparent) renderer.setClearAlpha(0);
             else renderer.setClearColor(0x000000, 1);
+            const finalColor = resolveCssColor(color);
+
             const uniforms = {
                 uResolution: { value: new THREE.Vector2(0, 0) },
                 uTime: { value: 0 },
-                uColor: { value: new THREE.Color(color) },
+
+                uColor: { value: new THREE.Color(finalColor) },
                 uClickPos: {
                     value: Array.from({ length: MAX_CLICKS }, () => new THREE.Vector2(-1, -1)),
                 },
