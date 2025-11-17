@@ -13,6 +13,10 @@ const languages = {
         name: 'English',
         flag: '🇬🇧',
     },
+    ja: {
+        name: '日本語',
+        flag: '🇯🇵',
+    },
 } as const;
 
 export function LanguageToggle() {

@@ -19,12 +19,20 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     // Detectar idioma del navegador o usar español por defecto
     const getInitialLanguage = (): Language => {
         const stored = localStorage.getItem('language') as Language;
-        if (stored && (stored === 'es' || stored === 'en')) {
+
+        // 1. Si hay valor guardado en localStorage → úsalo
+        if (stored && (stored === 'es' || stored === 'en' || stored === 'ja')) {
             return stored;
         }
 
+        // 2. Detectar idioma del navegador
         const browserLang = navigator.language.toLowerCase();
-        return browserLang.startsWith('es') ? 'es' : 'en';
+
+        if (browserLang.startsWith('es')) return 'es';
+        if (browserLang.startsWith('ja')) return 'ja';
+
+        // 3. Por defecto → inglés
+        return 'en';
     };
 
     const [language, setLanguageState] = useState<Language>(getInitialLanguage);

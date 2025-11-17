@@ -1,6 +1,7 @@
 // src/locales/index.ts
-import { es } from './es';
-import { en } from './en';
+import { es } from '@/locales/es';
+import { en } from '@/locales/en';
+import { ja } from '@/locales/ja';
 
 // Definir el tipo base de traducciones de forma genérica
 export type TranslationValue = string | string[] | Record<string, any>;
@@ -122,8 +123,9 @@ export interface Translations {
 export const translations = {
     es,
     en,
+    ja,
 } as const;
 
 export type Language = keyof typeof translations;
 
-export { es, en };
+export { es, en, ja };
