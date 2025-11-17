@@ -28,11 +28,11 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         // 2. Detectar idioma del navegador
         const browserLang = navigator.language.toLowerCase();
 
-        if (browserLang.startsWith('es')) return 'es';
+        if (browserLang.startsWith('en')) return 'en';
         if (browserLang.startsWith('ja')) return 'ja';
 
         // 3. Por defecto → inglés
-        return 'en';
+        return 'es';
     };
 
     const [language, setLanguageState] = useState<Language>(getInitialLanguage);

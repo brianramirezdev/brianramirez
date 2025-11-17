@@ -1,5 +1,6 @@
 export const projects = [
     {
+        id: 1,
         title: 'Queater',
         link: 'https://github.com/brianrddev/Queater',
         year: '2024',
@@ -9,6 +10,7 @@ export const projects = [
         image: './assets/queater.avif',
     },
     {
+        id: 2,
         title: 'JC Tus Asesores',
         link: 'https://jctusasesores.com/',
         year: '2025',
@@ -19,6 +21,7 @@ export const projects = [
         image: './assets/jctusasesores.avif',
     },
     {
+        id: 3,
         title: 'Vulca Comics',
         link: '#',
         year: '2025',

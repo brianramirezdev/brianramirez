@@ -43,7 +43,7 @@ export default function projectsSection() {
 
                 <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
-                        <ProjectCard key={`${language}-${index}`} project={project} index={index} projectImageAlt={t.projects.projectImageAlt} />
+                        <ProjectCard key={project.id} project={project} index={index} projectImageAlt={t.projects.projectImageAlt} />
                     ))}
                 </div>
             </div>
