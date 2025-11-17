@@ -9,6 +9,7 @@ export function useHeroRevealAnimation(gsap: any, ref: any, config?: any) {
 
             const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
 
+            tl.to('.hero-content', { opacity: 1, duration: 0 });
             tl.from(backgroundSelector, { opacity: 0, scale: 8, duration: 1 }, 0);
 
             tl.from(

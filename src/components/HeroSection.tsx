@@ -62,8 +62,16 @@ export default function HeroSection() {
     useHeroRevealAnimation(gsap, heroRef);
 
     return (
-        <section id="hero" ref={heroRef} className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center px-6 text-foreground">
-            {/* Background */}
+        <section
+            id="hero"
+            ref={heroRef}
+            className="
+                relative h-screen w-full overflow-hidden
+                flex flex-col items-center justify-center
+                px-6 text-foreground
+            "
+        >
+            {/* BACKGROUND */}
             <div className="absolute inset-0 hero-background pointer-events-none z-0">
                 <PixelBlast
                     variant="circle"
@@ -80,40 +88,59 @@ export default function HeroSection() {
                 />
             </div>
 
-            {/* CONTENT */}
-            <div
-                className="
-            relative z-10
-            max-w-7xl w-full mx-auto
-            flex flex-col items-center text-center
-            space-y-10
-        "
-            >
-                {/* NAME */}
-                <h1
+            {/* WRAPPER oculto al inicio para evitar parpadeos */}
+            <div className="hero-content opacity-0">
+                {/* CONTENT */}
+                <div
                     className="
-                hero-title
-                font-semibold leading-[0.95]
-                text-6xl md:text-8xl lg:text-[10rem]
-                tracking-[-0.02em]
-                drop-shadow-sm
-            "
+                    relative z-10
+                    max-w-7xl w-full mx-auto
+                    flex flex-col items-center text-center
+                    space-y-10
+                "
                 >
-                    {t.hero.name}
-                </h1>
+                    {/* NAME */}
+                    <h1
+                        className="
+                            hero-title
+                            font-semibold leading-[0.95]
+                            text-6xl md:text-8xl lg:text-[10rem]
+                            tracking-[-0.02em]
+                            drop-shadow-sm
+                        "
+                    >
+                        {t.hero.name}
+                    </h1>
 
-                {/* SUBTITLE */}
-                <p className="hero-subtitle max-w-3xl mx-auto text-xl md:text-3xl font-light text-killua leading-relaxed tracking-wide">{t.hero.title}</p>
+                    {/* SUBTITLE */}
+                    <p
+                        className="
+                        hero-subtitle
+                        max-w-3xl mx-auto
+                        text-xl md:text-3xl font-light
+                        text-killua leading-relaxed tracking-wide
+                    "
+                    >
+                        {t.hero.title}
+                    </p>
 
-                {/* Contact links */}
-                <div className="hero-contacts">
-                    <ContactLinks />
+                    {/* CONTACT LINKS */}
+                    <div className="hero-contacts">
+                        <ContactLinks />
+                    </div>
                 </div>
-            </div>
 
-            {/* LOGO LOOP */}
-            <div className="hero-logos absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-7xl z-10 opacity-95 ">
-                <LogoLoop logos={allLogos} speed={30} gap={40} scaleOnHover pauseOnHover />
+                {/* LOGO LOOP */}
+                <div
+                    className="
+                    hero-logos
+                    absolute bottom-12 left-1/2 -translate-x-1/2
+                    w-full max-w-7xl
+                    z-10 opacity-95
+                "
+                >
+                    <LogoLoop logos={allLogos} speed={30} gap={40} scaleOnHover pauseOnHover />
+                </div>
             </div>
         </section>
     );
