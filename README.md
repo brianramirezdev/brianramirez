@@ -17,7 +17,6 @@
 
 ### Frontend
 
-* **Next.js 14** (App Router, Server Components, Server Actions)
 * **React 18**
 * **TypeScript**
 * **Tailwind CSS 4**
