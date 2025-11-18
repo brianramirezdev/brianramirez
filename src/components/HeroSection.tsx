@@ -72,7 +72,7 @@ export default function HeroSection() {
             "
         >
             {/* BACKGROUND */}
-            <div className="absolute inset-0 hero-background pointer-events-none z-0">
+            <div className="absolute inset-0 hero-background pointer-events-none z-0 hidden md:block">
                 <PixelBlast
                     variant="circle"
                     pixelSize={3.5}
