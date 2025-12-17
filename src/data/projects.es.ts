@@ -31,4 +31,15 @@ export const projects = [
         highlight: false,
         image: './assets/vulcacomics.avif',
     },
+    {
+        id: 4,
+        title: 'Toti Sanz',
+        link: 'https://www.totisanz.com/',
+        year: '2025',
+        description:
+            'Web oficial del artista Toti Sanz diseñada como una experiencia visual y musical de alto rendimiento. Proyecto centrado en performance, accesibilidad y animación, con carga optimizada de recursos, integración multimedia (YouTube, Spotify, Apple Music) y una arquitectura moderna orientada a SEO y Core Web Vitals.',
+        tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'GSAP', 'YouTube Embed', 'Vercel'],
+        highlight: true,
+        image: './assets/totisanz.avif',
+    },
 ];
