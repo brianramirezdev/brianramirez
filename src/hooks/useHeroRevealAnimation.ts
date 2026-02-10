@@ -21,7 +21,7 @@ export function useHeroRevealAnimation(gsap: any, ref: any, config?: any) {
                     duration: 0.55,
                     stagger: 0.06,
                 },
-                '-=0.4'
+                '-=0.4',
             );
 
             tl.from(
@@ -31,7 +31,7 @@ export function useHeroRevealAnimation(gsap: any, ref: any, config?: any) {
                     opacity: 0,
                     duration: 0.55,
                 },
-                '-=0.2'
+                '-=0.2',
             );
 
             tl.from(
@@ -43,7 +43,7 @@ export function useHeroRevealAnimation(gsap: any, ref: any, config?: any) {
                     duration: 0.45,
                     stagger: 0.08,
                 },
-                '-=0.35'
+                '-=0.35',
             );
 
             tl.from(
@@ -54,7 +54,7 @@ export function useHeroRevealAnimation(gsap: any, ref: any, config?: any) {
                     duration: 0.5,
                     stagger: 0.04,
                 },
-                '-=0.8'
+                '-=0.8',
             );
         }, ref);
 

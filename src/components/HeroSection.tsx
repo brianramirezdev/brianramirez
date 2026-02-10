@@ -89,10 +89,9 @@ export default function HeroSection() {
             {/* BACKGROUND */}
             <div className="absolute inset-0 hero-background pointer-events-none z-0 hidden md:block">
                 <PixelBlast
-                    variant="circle"
-                    pixelSize={3.5}
-                    patternScale={3.1}
-                    patternDensity={1.25}
+                    pixelSize={4}
+                    patternScale={2}
+                    patternDensity={1}
                     pixelSizeJitter={0.5}
                     noiseAmount={0.1}
                     edgeFade={0.55}
@@ -100,6 +99,14 @@ export default function HeroSection() {
                     enableRipples={false}
                     transparent
                     color="var(--pixelblast)"
+                    variant="square"
+                    rippleSpeed={0.4}
+                    rippleThickness={0.12}
+                    rippleIntensityScale={1.5}
+                    liquidStrength={0.12}
+                    liquidRadius={1.2}
+                    liquidWobbleSpeed={5}
+                    speed={0.5}
                 />
             </div>
 
@@ -118,10 +125,9 @@ export default function HeroSection() {
                     <h1
                         className="
                             hero-title
-                            font-semibold leading-[0.95]
+                            font-bold leading-[0.95]
                             text-6xl md:text-8xl lg:text-[10rem]
                             tracking-[-0.02em]
-                            drop-shadow-sm
                         "
                     >
                         {t.hero.name}
