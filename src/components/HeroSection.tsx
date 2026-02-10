@@ -23,8 +23,6 @@ import {
     SiGithub,
     SiGitlab,
     SiStripe,
-    SiChartdotjs,
-    SiPusher,
     SiHostinger,
     SiNetlify,
     SiVercel,
