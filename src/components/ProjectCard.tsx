@@ -36,11 +36,11 @@ export function ProjectCard({ project, projectImageAlt }: ProjectCardProps) {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-killua focus-visible:ring-offset-2 rounded-md"
+                    className="p-1 block focus:outline-none focus-visible:ring-2 focus-visible:ring-killua focus-visible:ring-offset-2 rounded-md"
                     aria-label={`Ver proyecto ${project.title}, año ${project.year}`}
                 >
                     {/* Imagen del proyecto */}
-                    <div className="relative h-64 w-full overflow-hidden bg-muted">
+                    <div className="relative h-64 w-full overflow-hidden bg-muted rounded-sm">
                         {project.image ? (
                             <>
                                 <img

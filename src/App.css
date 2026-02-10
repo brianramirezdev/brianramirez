@@ -5,19 +5,19 @@
 @import 'tw-animate-css';
 
 @font-face {
-    font-family: 'Playfair Display';
-    src: url('/fonts/PlayfairDisplay.woff2') format('truetype');
+    font-family: 'Rethink Sans';
+    src: url('/fonts/RethinkSans.woff2') format('woff2');
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Space Grotesk';
-    src: url('/fonts/SpaceGrotesk.woff2') format('woff2');
+    font-family: 'Geist';
+    src: url('/fonts/Geist.woff2') format('woff2');
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
@@ -154,8 +154,12 @@
 @layer base {
     * {
         @apply border-border outline-ring/50 selection:bg-killua selection:text-primary-foreground;
-        font-family: 'Inter', sans-serif;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family:
+            'Geist',
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
         font-optical-sizing: auto;
     }
 
@@ -165,7 +169,12 @@
     h4,
     h5,
     h6 {
-        font-family: 'Playfair Display', serif;
+        font-family:
+            'Rethink Sans',
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
         font-optical-sizing: auto;
     }
 

@@ -2,38 +2,17 @@
 export const projects = [
     {
         id: 1,
-        title: 'Queater',
-        link: 'https://github.com/brianrddev/Queater',
-        year: '2024',
-        description: 'Web application that enhances restaurant service through QR codes, allowing customers to view the menu and place orders seamlessly.',
-        tech: ['Laravel', 'jQuery', 'Tailwind', 'MySQL', 'PHP'],
+        title: 'Focuspan',
+        link: 'https://github.com/brianramirezdev/todo-app',
+        year: '2025',
+        description:
+            'Full-stack web application for task and note management, designed to centralize work in a single productivity-focused panel. Features real server-side pagination, search and sorting, delivering a smooth and modern user experience.',
+        tech: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'TypeORM', 'Tailwind CSS', 'Docker'],
         highlight: true,
-        image: './assets/queater.avif',
+        image: './assets/focuspan.avif',
     },
     {
         id: 2,
-        title: 'JC Tus Asesores',
-        link: 'https://jctusasesores.com/',
-        year: '2025',
-        description:
-            "Complete development of the corporate website using Astro and Tailwind CSS. Automated system for BOE data retrieval and full management of the hotel's IT infrastructure.",
-        tech: ['Astro', 'Tailwind', 'JavaScript', 'MySQL'],
-        highlight: true,
-        image: './assets/jctusasesores.avif',
-    },
-    {
-        id: 3,
-        title: 'Vulca Comics',
-        link: '#',
-        year: '2025',
-        description:
-            'Comprehensive platform for managing games and tournaments, built with Laravel + React + Inertia. Features a modular admin panel, generic CRUD systems, reusable form components, and robust validation powered by FormRequest.',
-        tech: ['Laravel', 'React', 'Inertia', 'TypeScript', 'Tailwind', 'MySQL'],
-        highlight: false,
-        image: './assets/vulcacomics.avif',
-    },
-    {
-        id: 4,
         title: 'Toti Sanz',
         link: 'https://www.totisanz.com/',
         year: '2025',
@@ -42,5 +21,37 @@ export const projects = [
         tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'GSAP', 'YouTube Embed', 'Vercel'],
         highlight: true,
         image: './assets/totisanz.avif',
+    },
+    {
+        id: 3,
+        title: 'JC Tus Asesores',
+        link: 'https://jctusasesores.com/',
+        year: '2025',
+        description:
+            'Complete development of the corporate website using Astro and Tailwind CSS. Automated system for BOE data retrieval and full management of the hotel’s IT infrastructure.',
+        tech: ['Astro', 'Tailwind', 'JavaScript', 'MySQL'],
+        highlight: false,
+        image: './assets/jctusasesores.avif',
+    },
+    {
+        id: 4,
+        title: 'Queater',
+        link: 'https://github.com/brianramirezdev/Queater',
+        year: '2024',
+        description: 'Web application that enhances restaurant service through QR codes, allowing customers to view the menu and place orders seamlessly.',
+        tech: ['Laravel', 'jQuery', 'Tailwind', 'MySQL', 'PHP'],
+        highlight: true,
+        image: './assets/queater.avif',
+    },
+    {
+        id: 5,
+        title: 'Vulca Comics',
+        link: '#',
+        year: '2025',
+        description:
+            'Comprehensive platform for managing games and tournaments, built with Laravel + React + Inertia. Features a modular admin panel, generic CRUD systems, reusable form components, and robust validation powered by FormRequest.',
+        tech: ['Laravel', 'React', 'Inertia', 'TypeScript', 'Tailwind', 'MySQL'],
+        highlight: false,
+        image: './assets/vulcacomics.avif',
     },
 ];
