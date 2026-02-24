@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import ContactLinks from './ContactLinks';
 import { useRef } from 'react';
 import { useFooterRevealParallax } from '@/hooks/useFooterRevealParallax';
@@ -52,6 +53,10 @@ export default function Footer() {
                         <a href="/#about" className="hover:text-killua transition-colors block">
                             {t.footer.linkAbout}
                         </a>
+
+                        <Link to="/services" className="hover:text-killua transition-colors block">
+                            {t.footer.linkServices}
+                        </Link>
 
                         <a href="/#projects" className="hover:text-killua transition-colors block">
                             {t.footer.linkProjects}

@@ -8,6 +8,8 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { projects as projectsEs } from '@/data/projects.es';
 import { projects as projectsEn } from '@/data/projects.en';
 import { projects as projectsJa } from '@/data/projects.ja';
+import { projects as projectsFr } from '@/data/projects.fr';
+import { projects as projectsDe } from '@/data/projects.de';
 import SectionLayout from '@/layouts/SectionLayout';
 import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
 import { useGsap } from '@/hooks/useGsap';
@@ -21,7 +23,12 @@ export default function projectsSection() {
     useGsapFloatReveal(gsap, mainRef);
 
     // Seleccionar los proyectos según el idioma actual
-    const projects = language === 'es' ? projectsEs : language === 'ja' ? projectsJa : projectsEn;
+    const projects =
+        language === 'es' ? projectsEs
+        : language === 'ja' ? projectsJa
+        : language === 'fr' ? projectsFr
+        : language === 'de' ? projectsDe
+        : projectsEn;
 
     return (
         <SectionLayout id="projects" ref={mainRef} className="bg-secondary/30 m-4 inset-0 rounded-md border border-foreground/10 ">

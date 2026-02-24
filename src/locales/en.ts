@@ -2,6 +2,7 @@
 export const en = {
     navbar: {
         about: 'About',
+        services: 'Services',
         projects: 'Projects',
         contact: 'Contact',
         sidebarTitle: 'Menu',
@@ -108,12 +109,72 @@ export const en = {
 
         colLinksTitle: 'NAVIGATION',
         linkAbout: 'About me',
+        linkServices: 'Services',
         linkProjects: 'Projects',
         linkContact: 'Contact',
 
         // Bottom bar (if used)
         rights: 'All rights reserved.',
         crafted: 'Designed and developed by myself.',
+    },
+
+    services: {
+        title: 'Services',
+        subtitle: 'What I can do for you',
+        intro: 'I offer tailored technical solutions for businesses and projects that need real results. From concept to production, I get involved at every stage of the process.',
+
+        areas: [
+            { icon: 'Globe', title: 'Web Development', description: 'Creation and optimization of websites, landing pages, and management dashboards with modern design and top-tier performance.' },
+            { icon: 'Settings2', title: 'Custom Systems', description: 'Business logic, internal process automation, and administrative tools adapted to your operational needs.' },
+            { icon: 'Database', title: 'Data Management', description: 'Relational database design and administration, data analysis, and report generation.' },
+            { icon: 'BrainCircuit', title: 'Artificial Intelligence', description: 'AI solutions for classification, prediction, task automation, and intelligent assistants.' },
+            { icon: 'Plug', title: 'Integrations', description: 'Payment gateways (Stripe), messaging, external APIs, and connection between platforms and systems.' },
+            { icon: 'Server', title: 'Infrastructure', description: 'Hosting, application deployment, environment configuration, and technical security for production systems.' },
+        ],
+
+        pricingTitle: 'Engagement Models',
+        pricingSubtitle: 'Flexible options to fit every project and team.',
+
+        packageTitle: 'Hour Packages',
+        packageDescription: 'Designed for ongoing development, technical support, or recurring consulting. Prepaid.',
+        packageHours: 'Hours',
+        packagePrice: 'Price',
+        packageRate: 'Rate/h',
+        packages: [
+            { hours: '10 hours', price: '200 €', rate: '20 €/h' },
+            { hours: '20 hours', price: '360 €', rate: '18 €/h' },
+        ],
+
+        hourlyTitle: 'Hourly Rate',
+        hourlyPrice: '25 € / hour',
+        hourlyDescription: 'For one-off interventions, bug fixes, or specific adjustments with no long-term commitment.',
+
+        fixedTitle: 'Fixed-Price Projects',
+        fixedDescription: 'Fixed budget based on a requirements and objectives analysis. Ideal for projects with a clear scope.',
+        fixedProjects: [
+            { type: 'Corporate Website', price: 'From 600 €' },
+            { type: 'Application / Management Dashboard', price: 'From 1,200 €' },
+            { type: 'Management System / Digitalization', price: 'From 900 €' },
+        ],
+        fixedNote: 'The final price is defined after analyzing the complexity and the time savings it generates for the business.',
+
+        maintenanceTitle: 'Monthly Maintenance',
+        maintenancePrice: '90 € / month',
+        maintenanceIncludes: [
+            'Security monitoring',
+            'Critical updates',
+            'Backups',
+            '2 hours of monthly technical support',
+        ],
+
+        availabilityTitle: 'Availability',
+        schedule: 'Schedule',
+        scheduleValue: 'Monday to Friday · 4:00 PM – 8:00 PM (Canary Time)',
+        mode: 'Mode',
+        modeValue: 'Remote · Async communication and scheduled meetings',
+
+        ctaTitle: 'Have a project in mind?',
+        ctaButton: "Let's talk",
     },
 
     downloadCV: {

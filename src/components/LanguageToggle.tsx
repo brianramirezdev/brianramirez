@@ -17,6 +17,14 @@ const languages = {
         name: '日本語',
         flag: '🇯🇵',
     },
+    fr: {
+        name: 'Français',
+        flag: '🇫🇷',
+    },
+    de: {
+        name: 'Deutsch',
+        flag: '🇩🇪',
+    },
 } as const;
 
 export function LanguageToggle() {

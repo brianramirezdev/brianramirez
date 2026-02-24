@@ -2,6 +2,7 @@
 export const ja = {
     navbar: {
         about: '私について',
+        services: 'サービス',
         projects: 'プロジェクト',
         contact: 'お問い合わせ',
         sidebarTitle: 'メニュー',
@@ -111,12 +112,72 @@ export const ja = {
 
         colLinksTitle: 'ナビゲーション',
         linkAbout: '私について',
+        linkServices: 'サービス',
         linkProjects: 'プロジェクト',
         linkContact: 'お問い合わせ',
 
         // Bottom bar
         rights: '無断転載を禁じます。',
         crafted: 'デザインと開発はすべて私自身が手がけました。',
+    },
+
+    services: {
+        title: 'サービス',
+        subtitle: '私にできること',
+        intro: 'ビジネスやプロジェクトに対して、実際の成果を出せるオーダーメイドの技術ソリューションを提供します。アイデアから本番環境に至るまで、すべてのフェーズで卆身に取り組みます。',
+
+        areas: [
+            { icon: 'Globe', title: 'Web開発', description: 'モダンなデザインと高パフォーマンスなウェブサイト、ランディングページ、管理ダッシュボードの構築および最適化。' },
+            { icon: 'Settings2', title: 'カスタムシステム', description: '業務ロジック、社内プロセスの自動化、お客様の業務に合わせた管理ツールの開発。' },
+            { icon: 'Database', title: 'データ管理', description: 'リレーショナルデータベースの設計・管理、データ分析およびレポート作成。' },
+            { icon: 'BrainCircuit', title: '人工知能', description: '分類、予測、タスク自動化、インテリジェントアシスタントなどのAIソリューションの実装。' },
+            { icon: 'Plug', title: '連携・インテグレーション', description: '決済ゲートウェイ（Stripe）、メッセージング、外部API、プラットフォーム間の接続。' },
+            { icon: 'Server', title: 'インフラストラクチャ', description: 'ホスティング、アプリケーションデプロイ、環境構築、本番環境のセキュリティ管理。' },
+        ],
+
+        pricingTitle: '契約モデル',
+        pricingSubtitle: 'プロジェクトやチームに対応できる柔軟な選択肢。',
+
+        packageTitle: '時間パッケージ',
+        packageDescription: '継続的な開発、技術サポート、コンサルティングに適しています。前払い制。',
+        packageHours: '時間',
+        packagePrice: '料金',
+        packageRate: '時間単価',
+        packages: [
+            { hours: '10時間', price: '200 €', rate: '20 €/h' },
+            { hours: '20時間', price: '360 €', rate: '18 €/h' },
+        ],
+
+        hourlyTitle: '時間単価',
+        hourlyPrice: '25 € / 時間',
+        hourlyDescription: '小規模な修正、バグ修正、特定の調整など、長期コミットなしの小規模な作業に適しています。',
+
+        fixedTitle: '固定料金プロジェクト',
+        fixedDescription: '要件分析に基づく固定予算。明確なスコープのプロジェクトに最適。',
+        fixedProjects: [
+            { type: 'コーポレートサイト', price: '600 €から' },
+            { type: 'アプリ / 管理ダッシュボード', price: '1,200 €から' },
+            { type: '管理システム / デジタル化', price: '900 €から' },
+        ],
+        fixedNote: '最終的な料金は、複雑さと業務対応後に決定されます。',
+
+        maintenanceTitle: '月次メンテナンス',
+        maintenancePrice: '90 € / 月',
+        maintenanceIncludes: [
+            'セキュリティ監視',
+            '重要アップデート',
+            'バックアップ',
+            '月舁2時間の技術サポート',
+        ],
+
+        availabilityTitle: '対応可能時間',
+        schedule: 'スケジュール',
+        scheduleValue: '月曜日～金曜日 · 16:00～20:00（カナリア時間）',
+        mode: '対応方法',
+        modeValue: 'リモート · 非同期コミュニケーションおよびスケジュール済ミーティング',
+
+        ctaTitle: 'プロジェクトの構想はありますか？',
+        ctaButton: '相談する',
     },
 
     downloadCV: {

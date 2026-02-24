@@ -2,6 +2,8 @@
 import { es } from '@/locales/es';
 import { en } from '@/locales/en';
 import { ja } from '@/locales/ja';
+import { fr } from '@/locales/fr';
+import { de } from '@/locales/de';
 
 // Definir el tipo base de traducciones de forma genérica
 export type TranslationValue = string | string[] | Record<string, any>;
@@ -9,6 +11,7 @@ export type TranslationValue = string | string[] | Record<string, any>;
 export interface Translations {
     navbar: {
         about: string;
+        services: string;
         projects: string;
         contact: string;
         sidebarTitle: string;
@@ -98,12 +101,45 @@ export interface Translations {
 
         colLinksTitle: string;
         linkAbout: string;
+        linkServices: string;
         linkProjects: string;
         linkContact: string;
 
         // Bottom bar (optional)
         rights: string;
         crafted: string;
+    };
+
+    services: {
+        title: string;
+        subtitle: string;
+        intro: string;
+        areas: Array<{ icon: string; title: string; description: string }>;
+        pricingTitle: string;
+        pricingSubtitle: string;
+        packageTitle: string;
+        packageDescription: string;
+        packageHours: string;
+        packagePrice: string;
+        packageRate: string;
+        packages: Array<{ hours: string; price: string; rate: string }>;
+        hourlyTitle: string;
+        hourlyPrice: string;
+        hourlyDescription: string;
+        fixedTitle: string;
+        fixedDescription: string;
+        fixedProjects: Array<{ type: string; price: string }>;
+        fixedNote: string;
+        maintenanceTitle: string;
+        maintenancePrice: string;
+        maintenanceIncludes: string[];
+        availabilityTitle: string;
+        schedule: string;
+        scheduleValue: string;
+        mode: string;
+        modeValue: string;
+        ctaTitle: string;
+        ctaButton: string;
     };
 
     downloadCV: {
@@ -124,8 +160,10 @@ export const translations = {
     es,
     en,
     ja,
+    fr,
+    de,
 } as const;
 
 export type Language = keyof typeof translations;
 
-export { es, en, ja };
+export { es, en, ja, fr, de };

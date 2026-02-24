@@ -9,12 +9,19 @@ import { useGsapFloatReveal } from '@/hooks/useGsapFloatReveal';
 import { skills as skillsEs } from '@/data/skills.es';
 import { skills as skillsEn } from '@/data/skills.en';
 import { skills as skillsJa } from '@/data/skills.ja';
+import { skills as skillsFr } from '@/data/skills.fr';
+import { skills as skillsDe } from '@/data/skills.de';
 
 import { useGsap } from '@/hooks/useGsap';
 
 export default function AboutSection() {
     const { language, t } = useLanguage();
-    const skills = language === 'es' ? skillsEs : language === 'ja' ? skillsJa : skillsEn;
+    const skills =
+        language === 'es' ? skillsEs
+        : language === 'ja' ? skillsJa
+        : language === 'fr' ? skillsFr
+        : language === 'de' ? skillsDe
+        : skillsEn;
 
     const aboutRef = useRef<HTMLElement>(null);
     const gsap = useGsap();

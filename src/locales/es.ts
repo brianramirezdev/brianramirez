@@ -2,6 +2,7 @@
 export const es = {
     navbar: {
         about: 'Sobre mí',
+        services: 'Servicios',
         projects: 'Proyectos',
         contact: 'Contacto',
         sidebarTitle: 'Menú',
@@ -109,12 +110,72 @@ export const es = {
 
         colLinksTitle: 'NAVEGACIÓN',
         linkAbout: 'Sobre mí',
+        linkServices: 'Servicios',
         linkProjects: 'Proyectos',
         linkContact: 'Contacto',
 
         // Bottom bar (si lo usas en tu barrita inferior)
         rights: 'Todos los derechos reservados.',
         crafted: 'Diseñado y desarrollado por mí mismo.',
+    },
+
+    services: {
+        title: 'Servicios',
+        subtitle: 'Lo que puedo hacer por ti',
+        intro: 'Ofrezco soluciones técnicas a medida para empresas y proyectos que necesitan resultados reales. Desde la idea hasta la puesta en producción, me involucro en cada fase del proceso.',
+
+        areas: [
+            { icon: 'Globe', title: 'Desarrollo Web', description: 'Creación y optimización de sitios web, landing pages y paneles de gestión con diseño moderno y rendimiento superior.' },
+            { icon: 'Settings2', title: 'Sistemas a Medida', description: 'Lógica de negocio, automatización de procesos internos y herramientas administrativas adaptadas a tu operativa.' },
+            { icon: 'Database', title: 'Gestión de Datos', description: 'Diseño y administración de bases de datos relacionales, análisis de información y generación de informes.' },
+            { icon: 'BrainCircuit', title: 'Inteligencia Artificial', description: 'Implementación de soluciones IA para clasificación, predicción, automatización de tareas y asistentes inteligentes.' },
+            { icon: 'Plug', title: 'Integraciones', description: 'Pasarelas de pago (Stripe), mensajería, APIs externas y conexión entre plataformas y sistemas.' },
+            { icon: 'Server', title: 'Infraestructura', description: 'Alojamiento, despliegue de aplicaciones, configuración de entornos y seguridad técnica de sistemas en producción.' },
+        ],
+
+        pricingTitle: 'Modelos de Contratación',
+        pricingSubtitle: 'Flexibilidad para adaptarme a cada proyecto y equipo.',
+
+        packageTitle: 'Bolsa de Horas',
+        packageDescription: 'Orientado a desarrollo continuo, soporte técnico o consultoría recurrente. Pago por adelantado.',
+        packageHours: 'Horas',
+        packagePrice: 'Precio',
+        packageRate: 'Tarifa/h',
+        packages: [
+            { hours: '10 horas', price: '200 €', rate: '20 €/h' },
+            { hours: '20 horas', price: '360 €', rate: '18 €/h' },
+        ],
+
+        hourlyTitle: 'Tarifa por Hora',
+        hourlyPrice: '25 € / hora',
+        hourlyDescription: 'Para intervenciones puntuales, corrección de errores o ajustes específicos sin compromiso a largo plazo.',
+
+        fixedTitle: 'Proyectos Cerrados',
+        fixedDescription: 'Presupuesto fijo basado en un análisis de requisitos y objetivos definidos. Ideal para proyectos con alcance claro.',
+        fixedProjects: [
+            { type: 'Sitio Web Corporativo', price: 'Desde 600 €' },
+            { type: 'Aplicación / Panel de Gestión', price: 'Desde 1.200 €' },
+            { type: 'Sistema de Gestión / Digitalización', price: 'Desde 900 €' },
+        ],
+        fixedNote: 'El precio final se define tras analizar la complejidad y el ahorro de tiempo que genera al negocio.',
+
+        maintenanceTitle: 'Mantenimiento Mensual',
+        maintenancePrice: '90 € / mes',
+        maintenanceIncludes: [
+            'Supervisión de seguridad',
+            'Actualizaciones críticas',
+            'Copias de seguridad',
+            '2 horas de soporte técnico mensual',
+        ],
+
+        availabilityTitle: 'Disponibilidad',
+        schedule: 'Horario',
+        scheduleValue: 'Lunes a Viernes · 16:00 – 20:00 (Hora Canaria)',
+        mode: 'Modalidad',
+        modeValue: 'Remoto · Comunicación asíncrona y reuniones programadas',
+
+        ctaTitle: '¿Tienes un proyecto en mente?',
+        ctaButton: 'Hablemos',
     },
 
     downloadCV: {

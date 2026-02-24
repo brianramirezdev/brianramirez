@@ -21,7 +21,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
         const stored = localStorage.getItem('language') as Language;
 
         // 1. Si hay valor guardado en localStorage → úsalo
-        if (stored && (stored === 'es' || stored === 'en' || stored === 'ja')) {
+        if (stored && (stored === 'es' || stored === 'en' || stored === 'ja' || stored === 'fr' || stored === 'de')) {
             return stored;
         }
 
@@ -30,8 +30,10 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
         if (browserLang.startsWith('en')) return 'en';
         if (browserLang.startsWith('ja')) return 'ja';
+        if (browserLang.startsWith('fr')) return 'fr';
+        if (browserLang.startsWith('de')) return 'de';
 
-        // 3. Por defecto → inglés
+        // 3. Por defecto → español
         return 'es';
     };
 
