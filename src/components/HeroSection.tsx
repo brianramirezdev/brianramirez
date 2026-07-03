@@ -1,94 +1,94 @@
-import { useRef } from 'react';
-import ContactLinks from '@/components/ContactLinks';
-import LogoLoop from '@/components/LogoLoop';
-import PixelBlast from '@/components/PixelBlast';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { useGsap } from '@/hooks/useGsap';
-import { useHeroRevealAnimation } from '@/hooks/useHeroRevealAnimation';
+import { useRef } from "react";
+import ContactLinks from "@/components/ContactLinks";
+import LogoLoop from "@/components/LogoLoop";
+// import PixelBlast from "@/components/PixelBlast";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useGsap } from "@/hooks/useGsap";
+import { useHeroRevealAnimation } from "@/hooks/useHeroRevealAnimation";
 
 import {
-    SiTypescript,
-    SiHtml5,
-    SiCss,
-    SiJavascript,
-    SiReact,
-    SiAstro,
-    SiJquery,
-    SiTailwindcss,
-    SiLaravel,
-    SiPhp,
-    SiPython,
-    SiMysql,
-    SiGit,
-    SiGithub,
-    SiGitlab,
-    SiStripe,
-    SiHostinger,
-    SiNetlify,
-    SiVercel,
-    SiDocker,
-    SiExpress,
-    SiNextdotjs,
-    SiNodedotjs,
-    SiPostgresql,
-    SiTypeorm,
-} from '@icons-pack/react-simple-icons';
+  SiTypescript,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiReact,
+  SiAstro,
+  SiJquery,
+  SiTailwindcss,
+  SiLaravel,
+  SiPhp,
+  SiPython,
+  SiMysql,
+  SiGit,
+  SiGithub,
+  SiGitlab,
+  SiStripe,
+  SiHostinger,
+  SiNetlify,
+  SiVercel,
+  SiDocker,
+  SiExpress,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
+  SiTypeorm,
+} from "@icons-pack/react-simple-icons";
 
 const allLogos = [
-    { node: <SiHtml5 size={36} title="HTML5" /> },
-    { node: <SiCss size={36} title="CSS3" /> },
-    { node: <SiJavascript size={36} title="JavaScript" /> },
-    { node: <SiTypescript size={36} title="TypeScript" /> },
+  { node: <SiHtml5 size={36} title="HTML5" /> },
+  { node: <SiCss size={36} title="CSS3" /> },
+  { node: <SiJavascript size={36} title="JavaScript" /> },
+  { node: <SiTypescript size={36} title="TypeScript" /> },
 
-    { node: <SiReact size={36} title="React" /> },
-    { node: <SiNextdotjs size={36} title="Next.js" /> },
-    { node: <SiAstro size={36} title="Astro" /> },
-    { node: <SiJquery size={36} title="jQuery" /> },
-    { node: <SiTailwindcss size={36} title="Tailwind CSS" /> },
+  { node: <SiReact size={36} title="React" /> },
+  { node: <SiNextdotjs size={36} title="Next.js" /> },
+  { node: <SiAstro size={36} title="Astro" /> },
+  { node: <SiJquery size={36} title="jQuery" /> },
+  { node: <SiTailwindcss size={36} title="Tailwind CSS" /> },
 
-    { node: <SiNodedotjs size={36} title="Node.js" /> },
-    { node: <SiExpress size={36} title="Express" /> },
-    { node: <SiLaravel size={36} title="Laravel" /> },
-    { node: <SiPhp size={36} title="PHP" /> },
-    { node: <SiPython size={36} title="Python" /> },
+  { node: <SiNodedotjs size={36} title="Node.js" /> },
+  { node: <SiExpress size={36} title="Express" /> },
+  { node: <SiLaravel size={36} title="Laravel" /> },
+  { node: <SiPhp size={36} title="PHP" /> },
+  { node: <SiPython size={36} title="Python" /> },
 
-    { node: <SiMysql size={36} title="MySQL" /> },
-    { node: <SiPostgresql size={36} title="PostgreSQL" /> },
-    { node: <SiTypeorm size={36} title="TypeORM" /> },
+  { node: <SiMysql size={36} title="MySQL" /> },
+  { node: <SiPostgresql size={36} title="PostgreSQL" /> },
+  { node: <SiTypeorm size={36} title="TypeORM" /> },
 
-    { node: <SiStripe size={36} title="Stripe" /> },
+  { node: <SiStripe size={36} title="Stripe" /> },
 
-    { node: <SiDocker size={36} title="Docker" /> },
+  { node: <SiDocker size={36} title="Docker" /> },
 
-    { node: <SiGit size={36} title="Git" /> },
-    { node: <SiGithub size={36} title="GitHub" /> },
-    { node: <SiGitlab size={36} title="GitLab" /> },
+  { node: <SiGit size={36} title="Git" /> },
+  { node: <SiGithub size={36} title="GitHub" /> },
+  { node: <SiGitlab size={36} title="GitLab" /> },
 
-    { node: <SiHostinger size={36} title="Hostinger" /> },
-    { node: <SiNetlify size={36} title="Netlify" /> },
-    { node: <SiVercel size={36} title="Vercel" /> },
+  { node: <SiHostinger size={36} title="Hostinger" /> },
+  { node: <SiNetlify size={36} title="Netlify" /> },
+  { node: <SiVercel size={36} title="Vercel" /> },
 ];
 
 export default function HeroSection() {
-    const { t } = useLanguage();
-    const heroRef = useRef<HTMLElement>(null);
+  const { t } = useLanguage();
+  const heroRef = useRef<HTMLElement>(null);
 
-    const gsap = useGsap();
-    useHeroRevealAnimation(gsap, heroRef);
+  const gsap = useGsap();
+  useHeroRevealAnimation(gsap, heroRef);
 
-    return (
-        <section
-            id="hero"
-            ref={heroRef}
-            className="
+  return (
+    <section
+      id="hero"
+      ref={heroRef}
+      className="
                 relative h-screen w-full overflow-hidden
                 flex flex-col items-center justify-center
                 px-6 text-foreground
             "
-        >
-            {/* BACKGROUND */}
-            <div className="absolute inset-0 hero-background pointer-events-none z-0 hidden md:block">
-                <PixelBlast
+    >
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 hero-background pointer-events-none z-0 hidden md:block">
+        {/*<PixelBlast
                     pixelSize={4}
                     patternScale={2}
                     patternDensity={1}
@@ -107,62 +107,68 @@ export default function HeroSection() {
                     liquidRadius={1.2}
                     liquidWobbleSpeed={5}
                     speed={0.5}
-                />
-            </div>
+                />*/}
+      </div>
 
-            {/* WRAPPER oculto al inicio para evitar parpadeos */}
-            <div className="hero-content opacity-0">
-                {/* CONTENT */}
-                <div
-                    className="
+      {/* WRAPPER oculto al inicio para evitar parpadeos */}
+      <div className="hero-content opacity-0">
+        {/* CONTENT */}
+        <div
+          className="
                     relative z-10
                     max-w-7xl w-full mx-auto
                     flex flex-col items-center text-center
                     space-y-10
                 "
-                >
-                    {/* NAME */}
-                    <h1
-                        className="
+        >
+          {/* NAME */}
+          <h1
+            className="
                             hero-title
                             font-bold leading-[0.95]
                             text-6xl md:text-8xl lg:text-[10rem]
                             tracking-[-0.02em]
                         "
-                    >
-                        {t.hero.name}
-                    </h1>
+          >
+            {t.hero.name}
+          </h1>
 
-                    {/* SUBTITLE */}
-                    <p
-                        className="
+          {/* SUBTITLE */}
+          <p
+            className="
                         hero-subtitle
                         max-w-3xl mx-auto
                         text-xl md:text-3xl font-light
                         text-killua leading-relaxed tracking-wide
                     "
-                    >
-                        {t.hero.title}
-                    </p>
+          >
+            {t.hero.title}
+          </p>
 
-                    {/* CONTACT LINKS */}
-                    <div className="hero-contacts">
-                        <ContactLinks />
-                    </div>
-                </div>
+          {/* CONTACT LINKS */}
+          <div className="hero-contacts">
+            <ContactLinks />
+          </div>
+        </div>
 
-                {/* LOGO LOOP */}
-                <div
-                    className="
+        {/* LOGO LOOP */}
+        <div
+          className="
                     hero-logos
                     absolute bottom-12 left-1/2 -translate-x-1/2
                     w-full max-w-7xl
                     z-10 opacity-95
                 "
-                >
-                    <LogoLoop logos={allLogos} speed={30} gap={40} scaleOnHover pauseOnHover />
-                </div>
-            </div>
-        </section>
-    );
+        >
+          <LogoLoop
+            logos={allLogos}
+            speed={30}
+            gap={40}
+            scaleOnHover
+            pauseOnHover
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
