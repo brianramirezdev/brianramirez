@@ -35,38 +35,38 @@ import {
 } from "@icons-pack/react-simple-icons";
 
 const allLogos = [
-  { node: <SiHtml5 size={36} title="HTML5" /> },
-  { node: <SiCss size={36} title="CSS3" /> },
-  { node: <SiJavascript size={36} title="JavaScript" /> },
-  { node: <SiTypescript size={36} title="TypeScript" /> },
+  { node: <SiHtml5 size={36} /> },
+  { node: <SiCss size={36} /> },
+  { node: <SiJavascript size={36} /> },
+  { node: <SiTypescript size={36} /> },
 
-  { node: <SiReact size={36} title="React" /> },
-  { node: <SiNextdotjs size={36} title="Next.js" /> },
-  { node: <SiAstro size={36} title="Astro" /> },
-  { node: <SiJquery size={36} title="jQuery" /> },
-  { node: <SiTailwindcss size={36} title="Tailwind CSS" /> },
+  { node: <SiReact size={36} /> },
+  { node: <SiNextdotjs size={36} /> },
+  { node: <SiAstro size={36} /> },
+  { node: <SiJquery size={36} /> },
+  { node: <SiTailwindcss size={36} /> },
 
-  { node: <SiNodedotjs size={36} title="Node.js" /> },
-  { node: <SiExpress size={36} title="Express" /> },
-  { node: <SiLaravel size={36} title="Laravel" /> },
-  { node: <SiPhp size={36} title="PHP" /> },
-  { node: <SiPython size={36} title="Python" /> },
+  { node: <SiNodedotjs size={36} /> },
+  { node: <SiExpress size={36} /> },
+  { node: <SiLaravel size={36} /> },
+  { node: <SiPhp size={36} /> },
+  { node: <SiPython size={36} /> },
 
-  { node: <SiMysql size={36} title="MySQL" /> },
-  { node: <SiPostgresql size={36} title="PostgreSQL" /> },
-  { node: <SiTypeorm size={36} title="TypeORM" /> },
+  { node: <SiMysql size={36} /> },
+  { node: <SiPostgresql size={36} /> },
+  { node: <SiTypeorm size={36} /> },
 
-  { node: <SiStripe size={36} title="Stripe" /> },
+  { node: <SiStripe size={36} /> },
 
-  { node: <SiDocker size={36} title="Docker" /> },
+  { node: <SiDocker size={36} /> },
 
-  { node: <SiGit size={36} title="Git" /> },
-  { node: <SiGithub size={36} title="GitHub" /> },
-  { node: <SiGitlab size={36} title="GitLab" /> },
+  { node: <SiGit size={36} /> },
+  { node: <SiGithub size={36} /> },
+  { node: <SiGitlab size={36} /> },
 
-  { node: <SiHostinger size={36} title="Hostinger" /> },
-  { node: <SiNetlify size={36} title="Netlify" /> },
-  { node: <SiVercel size={36} title="Vercel" /> },
+  { node: <SiHostinger size={36} /> },
+  { node: <SiNetlify size={36} /> },
+  { node: <SiVercel size={36} /> },
 ];
 
 export default function HeroSection() {
